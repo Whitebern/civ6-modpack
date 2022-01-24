@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="e14c75d4-0fea-11eb-adc1-0242ac120002" version="1">
+	<Properties>
+		<Name>Vis</Name>
+		<Teaser>Made by Vellanci for Vellanci</Teaser>
+		<Description>WTF Why should be here any description??? I do wtf I want GFY</Description>
+		<Authors>Vellanci</Authors>
+		<ShowInBrowser>Show</ShowInBrowser>
+		<EnabledByDefault>1</EnabledByDefault>
+		<EnabledAtStartup>1</EnabledAtStartup>
+	</Properties>
+	<Components>
+		<UpdateDatabase id="GAMEPLAY_DATA">
+			<Items>
+				<File>Data/Barbarians.xml</File>
+				<File>Data/GoodyHuts.xml</File>
+				<File>Data/GiganticMap_GameplayData.xml</File>
+			</Items>
+		</UpdateDatabase>
+	</Components>
+	<Settings>
+		<Custom id="CONFIG_DATA">
+			<Items>
+				<File>Data/GiganticMap_ConfigData.xml</File>
+			</Items>
+		</Custom>
+	</Settings>
+	<Files>
+		<File>Data/Barbarians.xml</File>
+		<File>Data/GiganticMap_GameplayData.xml</File>
+		<File>Data/GiganticMap_ConfigData.xml</File>
+		<File>Data/GoodyHuts.xml</File>
+	</Files>
+</Mod>

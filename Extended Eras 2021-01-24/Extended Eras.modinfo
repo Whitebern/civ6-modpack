@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="9388ec5d-e6c3-4314-95d4-ffa47046947d" version="1">
+  <Properties>
+    <Name>Extended Eras</Name>
+    <Description>Improves the game's pacing.</Description>
+    <Created>1611454470</Created>
+    <Teaser>Improves the game's pacing.</Teaser>
+    <Authors>p0kiehl; Zee</Authors>
+    <SpecialThanks>JanBortua, View619</SpecialThanks>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+  </Properties>
+  <Dependencies>
+    <Mod id="4873eb62-8ccc-4574-b784-dda455e74e68" title="Expansion: Gathering Storm" />
+  </Dependencies>
+  <ActionCriteria>
+    <Criteria id="NoShuffleMode">
+      <ConfigurationValueMatches>
+        <Group>Game</Group>
+        <ConfigurationId>GAMEMODE_TREE_RANDOMIZER</ConfigurationId>
+        <Value>0</Value>
+      </ConfigurationValueMatches>
+    </Criteria>
+    <Criteria id="ShuffleMode">
+      <ConfigurationValueMatches>
+        <Group>Game</Group>
+        <ConfigurationId>GAMEMODE_TREE_RANDOMIZER</ConfigurationId>
+        <Value>1</Value>
+      </ConfigurationValueMatches>
+    </Criteria>
+  </ActionCriteria>
+  <FrontEndActions>
+    <UpdateText id="Localisation">
+      <Properties>
+        <LoadOrder>999</LoadOrder>
+      </Properties>
+      <File>Localisation.sql</File>
+    </UpdateText>
+  </FrontEndActions>
+  <InGameActions>
+    <UpdateDatabase id="Gameplay">
+      <Properties>
+        <LoadOrder>999</LoadOrder>
+      </Properties>
+      <File>Calendar.sql</File>
+      <File>GlobalParameters.sql</File>
+      <File>Projects.sql</File>
+      <File>Routes.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Eras_NoShuffleMode">
+      <Properties>
+        <LoadOrder>999</LoadOrder>
+      </Properties>
+      <Criteria>NoShuffleMode</Criteria>
+      <File>Eras_NoShuffleMode.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Eras_ShuffleMode">
+      <Properties>
+        <LoadOrder>999</LoadOrder>
+      </Properties>
+      <Criteria>ShuffleMode</Criteria>
+      <File>Eras_ShuffleMode.sql</File>
+    </UpdateDatabase>
+    <UpdateText id="Text">
+      <Properties>
+        <LoadOrder>999</LoadOrder>
+      </Properties>
+      <File>Localisation_In_Game.sql</File>
+    </UpdateText>
+  </InGameActions>
+  <Files>
+    <File>Calendar.sql</File>
+    <File>Eras_NoShuffleMode.sql</File>
+    <File>Eras_ShuffleMode.sql</File>
+    <File>GlobalParameters.sql</File>
+    <File>Localisation.sql</File>
+    <File>Localisation_In_Game.sql</File>
+    <File>Projects.sql</File>
+    <File>Routes.sql</File>
+  </Files>
+</Mod>

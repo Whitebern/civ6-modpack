@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="1d44b5e7-753e-405b-af24-5ee634ec8a01" version="3.1">
+    <!-- ==============================  Basic Mod Information ============================== -->
+    <Properties>
+        <AffectsSavedGames>0</AffectsSavedGames>
+        <Name>Community Quick User Interface</Name>
+        <Teaser>CQUI</Teaser>
+        <Description>The Community Quick User Interface MOD, 2020 CivFanatics Version</Description>
+        <CompatibleVersions>1.2,2.0</CompatibleVersions>
+        <!-- (New-TimeSpan -Start (Get-Date "01/01/1970") -End (Get-Date)).TotalSeconds -->
+        <Created>1612307834</Created>
+    </Properties>
+
+    <!--============================== Incompatible mods ============================== -->
+    <Blocks>
+        <Mod id="9e9923e5-6842-4e7d-97e7-c9a56a85cf03" title="Simplified Gossip" />
+        <Mod id="37b5fdca-2690-96ff-ea23-d8612ae7a757" title="Divine Yuri's Custom City Panel" />
+        <Mod id="37b5fdca-2690-96ff-ea23-d8612ae7a758" title="Next City Plot by Ace" />
+        <Mod id="2027E5A2-A48D-E606-031F-141E1196975A" title="Production Queue" />
+        <Mod id="35f33319-ad93-4d6b-bf27-406fac382d06" title="More Lenses" />
+        <Mod id="c9d28cde-61ee-459c-93f5-c734cd392553" title="NQ Enhanced User Interface" />
+        <!-- Better Trade Screen is already integrated -->
+        <Mod id="8d4fa23a-ef43-440c-8422-2bec11f8f5d7" title="Better Trade Screen" />
+        <!-- CQUI implements the same functionality (current load order is 105) -->
+        <Mod id="5fa339e0-1cef-4a63-abdb-549fadbd670d" title="Suzerain At A Glance" />
+    </Blocks>
+
+    <!-- ==============================  Modinfo Specific LOC ============================== -->
+    <LocalizedText>
+        <Text id="CQUI_TEASER">
+            <en_US>Reduce clicks and make empire management easy.</en_US>
+            <fr_FR>Réduit les clics et rend la gestion de l'empire facile.</fr_FR>
+            <zh_Hans_CN>一键化操作，轻松管理您的帝国</zh_Hans_CN>
+            <pl_PL>Zmniejsz ilość kliknięć i spraw by zarządzanie imperium było łatwiejsze.</pl_PL>
+            <ru_RU>Убирает лишние клики и облегчает управление империей</ru_RU>
+            <de_DE>Reduziert die Anzahl der Klicks und vereinfacht das Civ-Management.</de_DE>
+            <it_IT>Riduce i click e facilita la gestione dell'impero.</it_IT>
+            <ko_KR>문명 게임 플레이를 더욱 간편하게 해주는 CQUI 모드입니다</ko_KR>
+            <pt_BR>Reduz cliques e facilita o gerencimento do império</pt_BR>
+        </Text>
+    </LocalizedText>
+
+    <!-- ============================== Action Criteria ============================== -->
+    <ActionCriteria>
+        <Criteria id="Expansion1">
+            <GameCoreInUse>Expansion1</GameCoreInUse>
+        </Criteria>
+        <Criteria id="Expansion2">
+            <GameCoreInUse>Expansion2</GameCoreInUse>
+        </Criteria>
+        <Criteria id="Expansion1AndBeyond" any="1">
+            <GameCoreInUse>Expansion1</GameCoreInUse>
+            <RuleSetInUse>RULESET_EXPANSION_1,RULESET_EXPANSION_2</RuleSetInUse>
+            <LeaderPlayable>Players:Expansion1_Players::LEADER_CHANDRAGUPTA,Players:Expansion1_Players::LEADER_GENGHIS_KHAN,Players:Expansion1_Players::LEADER_LAUTARO,Players:Expansion1_Players::LEADER_POUNDMAKER,Players:Expansion1_Players::LEADER_ROBERT_THE_BRUCE,Players:Expansion1_Players::LEADER_SEONDEOK,Players:Expansion1_Players::LEADER_SHAKA,Players:Expansion1_Players::LEADER_TAMAR,Players:Expansion1_Players::LEADER_WILHELMINA</LeaderPlayable>
+            <LeaderPlayable>Players:Expansion2_Players::LEADER_CHANDRAGUPTA,Players:Expansion2_Players::LEADER_GENGHIS_KHAN,Players:Expansion2_Players::LEADER_LAUTARO,Players:Expansion2_Players::LEADER_POUNDMAKER,Players:Expansion2_Players::LEADER_ROBERT_THE_BRUCE,Players:Expansion2_Players::LEADER_SEONDEOK,Players:Expansion2_Players::LEADER_SHAKA,Players:Expansion2_Players::LEADER_TAMAR,Players:Expansion2_Players::LEADER_WILHELMINA</LeaderPlayable>
+        </Criteria>
+        <Criteria id="Heroes_Mode">
+            <ConfigurationValueMatches>
+                <Group>Game</Group>
+                <ConfigurationId>GAMEMODE_HEROES</ConfigurationId>
+                <Value>1</Value>
+            </ConfigurationValueMatches>
+        </Criteria>
+        <!-- Lots of overlap in CQUI and EDR users; EDR makes minor changes to DiplomacyDealView -->
+        <!-- TODO: Pre-game configuration option that allows the user to say "just use the EDR version of DiplomacyDealView" -->
+        <Criteria id="ModNotInUse_ExtendedDiplomacyRibbon">
+            <ModInUse inverse="1">382a187f-c8ba-4094-a6a7-0d5315661f32</ModInUse>
+        </Criteria>
+        <Criteria id="ModInUse_ExtendedDiplomacyRibbon">
+            <ModInUse>382a187f-c8ba-4094-a6a7-0d5315661f32</ModInUse>
+        </Criteria>
+    </ActionCriteria>
+
+    <!-- ============================== CQUI specific settings ============================== -->
+    <FrontEndActions>
+        <UpdateDatabase id="MoreLenses_KeyBinding_Options">
+            <File>Integrations/ML/UI/hotkey_config.xml</File>
+        </UpdateDatabase>
+
+        <LocalizedText id="CQUI_MORELENSES_TEXT">
+            <Items>
+                <File Priority="1">Integrations/ML/Text/morelenses_text.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_de.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_es.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_fr.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_it.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_ja.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_ko.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_pl.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_pt.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_ru.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_zh.xml</File>
+            </Items>
+        </LocalizedText>
+    </FrontEndActions>
+
+    <InGameActions>
+        <UpdateDatabase id="CQUI_Settings">
+            <Properties>
+                <Name>CQUI Settings</Name>
+                <LoadOrder>-15</LoadOrder>
+            </Properties>
+            <Items>
+                <File>Assets/cqui_databaseschema.sql</File>
+                <File>Assets/cqui_settings.sql</File>
+            </Items>
+        </UpdateDatabase>
+        <!-- This is a "hack", however it is one that allows users to skirt the issue of their settings_local file being updated every time we push new updates -->
+        <!-- We are allowed to reference files in the parent folder to the .modinfo file, if the file exists then the game will load it up just fine. -->
+        <!-- However, these files in the parent folder are *not* uploaded to the Steam Workshop and do *not* appear in the [SteamPath]\SteamApps\Workshop\Content\289070 folder (the Civ6 Workshop Mods folder) of users that subscribe -->
+        <!-- Therefore, by placing this here, we can allow users to place a cqui_settings_local.sql file in the 289070 folder that allows them to have their customized mod settings be applied to every new game -->
+        <!-- without fear that those settings would be overwritten whenever a new version of the mod is uploaded to the workshop. -->
+        <!-- This "ParentFolder" version will load after and overwrite settings of the version found in the CQUI Mod root folder. -->
+        <UpdateDatabase id="CQUI_Settings_Local_ParentFolder">
+            <Properties>
+                <Name>CQUI Settings Local (Parent Folder)</Name>
+                <LoadOrder>-10</LoadOrder>
+            </Properties>
+            <Items>
+                <File>../cqui_settings_local.sql</File>
+            </Items>
+        </UpdateDatabase>
+        <UpdateDatabase id="CQUI_Database">
+            <Properties>
+                <LoadOrder>1</LoadOrder>
+            </Properties>
+            <Items>
+                <File>Assets/cqui_data.sql</File>
+            </Items>
+        </UpdateDatabase>
+        <!-- LoadOrder 0 is default, we need this to load first -->
+        <!-- 0 is where most actions are applied.  -100 is for Schema changes, and just ensuring early loads are caught -->
+        <!-- This table can be found in the Documentation included with the SDK.  It exists as a poorly formatted markdown table. -->
+        <!-- |Value      |Description|
+        |-100       |Schema changes
+                     Remove Data
+                     Populate core data| 
+        |-75        |Unofficial Schema changes|
+        |-50        |Premature Updates 
+                     Updates that need to be made before content is typically added.|
+        |-25        |Unofficial changes to premature updates|
+        |0          |Standard Content Updates
+                     Most actions applied during this phase.|
+        |25         |Unofficial changes to standard updates| 
+        |50         |Post Updates
+                     Updates that require most content to be provided.|
+        |75         |Unofficial changes to post-update content| 
+        |100        |Scenario Updates
+                     Often applied at the very end of everything else. Called out as its own phase.|
+        |125        |Unofficial changes to Scenario updates.|
+        -->
+
+        <!-- The LoadOrder of this file needs to be after the Database Schema changes, but before everything else in the mod -->
+        <ImportFiles id="CQUI_IMPORT_FILES_CQUICOMMON">
+            <Properties>
+                <LoadOrder>-10</LoadOrder>
+            </Properties>
+            <Items>
+                <File>Assets/UI/CQUICommon.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_TEXTURES">
+            <Items>
+                <File>Assets/Texture/CQUI_GreatPeople_Background_Bottom.dds</File>
+                <File>Assets/Texture/CQUI_GreatPeople_Background_Repeat_Bottom.dds</File>
+                <File>Assets/Texture/CQUI_GreatPeople_Background_Repeat_Top.dds</File>
+                <File>Assets/Texture/CQUI_GreatPeople_Background_Top.dds</File>
+                <File>Assets/Texture/CQUI_Heroes_Background_Bottom.dds</File>
+                <File>Assets/Texture/CQUI_Heroes_Background_Repeat_Bottom.dds</File>
+                <File>Assets/Texture/CQUI_Heroes_Background_Repeat_Top.dds</File>
+                <File>Assets/Texture/CQUI_Heroes_Background_Top.dds</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_OPTIONS_MENU">
+            <Items>
+                <File>Assets/UI/Options_CQUI.lua</File>
+                <File>Assets/UI/options.xml</File>
+                <File>Assets/UI/Menus/InGameTopOptionsMenu_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <!-- ============================== CQUI Base Game and Base/Exp1/Exp2 Common files ============================== -->
+        <ImportFiles id="CQUI_IMPORT_FILES_ACTIONPANEL">
+            <Items>
+                <File>Assets/UI/actionpanel.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_CHOOSERS">
+            <Items>
+                <File>Assets/UI/Choosers/CivicsChooser_CQUI.lua</File>
+                <File>Assets/UI/Choosers/ResearchChooser_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_CITYBANNERMANAGER_BASEGAME">
+            <Properties>
+                <!-- We need to ensure that the CQUI CityBannerManager.xml loads instead of say, the one from the Barbarian Tribes mode -->
+                <LoadOrder>50</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/UI/WorldView/citybannermanager.xml</File>
+                <!-- Placeholder for future work -->
+                <!-- <File>Assets/UI/WorldView/citybannerinstances.xml</File> -->
+                <!-- <File>Assets/UI/WorldView/cityreligioninstances.xml</File> -->
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_CITYBANNERMANAGER_LUA">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/UI/WorldView/CityBannerManager_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_CIVILOPEDIA">
+            <Items>
+                <File>Assets/UI/Civilopedia/civilopediasupport_CQUI.lua</File>
+                <File>Assets/UI/Civilopedia/civilopediascreen.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_CITYPANELS">
+            <Items>
+                <File>Assets/UI/Panels/citypanel.lua</File>
+                <File>Assets/UI/Panels/citypanel.xml</File>
+                <File>Assets/UI/Panels/citypaneloverview.lua</File>
+                <File>Assets/UI/Panels/citypaneloverview.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_CITYSTATES">
+            <Items>
+                <File>Assets/UI/PartialScreens/citystates_CQUI_basegame.lua</File>
+                <File>Assets/UI/PartialScreens/citystates_CQUI.lua</File>
+                <File>Assets/UI/PartialScreens/citystates.xml</File>
+            </Items>
+        </ImportFiles>
+
+
+        <ImportFiles id="CQUI_IMPORT_FILES_DIPLOMACYACTIONVIEW">
+            <Items>
+                <File>Assets/UI/diplomacyactionview_CQUI_basegame.lua</File>
+                <File>Assets/UI/diplomacyactionview_CQUI.lua</File>
+                <File>Assets/UI/diplomacyactionview.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <!-- DiplomacyDealView: always load our file with the overwrites and extensions -->
+        <ImportFiles id="CQUI_IMPORT_FILES_DIPLOMACYDEALVIEW_LUA">
+            <!-- Default load order value -->
+            <Items>
+                <File>Assets/UI/DiplomacyDealView_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <!-- Extended Diplomacy Ribbon is not running, load the CQUI XML using the default load oder value -->
+        <ImportFiles id="CQUI_IMPORT_FILES_DIPLOMACYDEALVIEW_XML_NO_EDR" criteria = "ModNotInUse_ExtendedDiplomacyRibbon">
+            <!-- Default load order value -->
+            <Items>
+                <File>Assets/UI/diplomacydealview.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <!-- Extended Diplomacy Ribbon has a load order value of 13000 (or 13001, 13002) for its DiplomacyDealView.xml, CQUI needs to load later -->
+        <ImportFiles id="CQUI_IMPORT_FILES_DIPLOMACYDEALVIEW_XML_EDR" criteria = "ModInUse_ExtendedDiplomacyRibbon">
+            <Properties>
+                <LoadOrder>13013</LoadOrder>
+            </Properties>
+            <Items>
+                <File>Assets/UI/diplomacydealview.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_DIPLOMACYRIBBON">
+            <Items>
+                <File>Assets/UI/diplomacyribbon_CQUI_basegame.lua</File>
+                <File>Assets/UI/diplomacyribbon_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_DISTRICTPLOTICONMANAGER">
+            <Items>
+                <File>Assets/UI/WorldView/districtploticonmanager_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_GOVERNMENTSCREEN">
+            <Items>
+                <File>Assets/UI/Screens/governmentscreen_CQUI_basegame.lua</File>
+                <File>Assets/UI/Screens/governmentscreen_CQUI.lua</File>
+                <File>Assets/UI/Utilities/extendedrelationship.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_GREATPEOPLEPOPUP">
+            <Items>
+                <File>Assets/UI/Popups/greatpeoplepopup.lua</File>
+                <File>Assets/UI/Popups/greatpeoplepopup.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_INGAME">
+            <Items>
+                <File>Assets/UI/ingame.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_LAUNCHBAR">
+            <Items>
+                <File>Assets/UI/launchbar_CQUI_basegame.lua</File>
+                <File>Assets/UI/launchbar_CQUI.lua</File>
+                <File>Assets/UI/launchbar.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_MAPPINMANAGER">
+            <Items>
+                <File>Assets/UI/MapPinManager_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_NOTIFICATIONSTATUSPANELS">
+            <Items>
+                <!-- Note: Casing must match the style in Firaxis' NotificationPanel.lua in order to properly be included. -->
+                <File>Assets/UI/Panels/NotificationPanel_CQUI.lua</File>
+                <File>Assets/UI/Panels/StatusMessagePanel_CQUI.lua</File>
+                <File>Assets/UI/Panels/statusmessagepanel.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_PARTIALSCREENHOOKS">
+            <Items>
+                <File>Assets/UI/partialscreenhooks_CQUI_basegame.lua</File>
+                <File>Assets/UI/partialscreenhooks_CQUI.lua</File>
+                <File>Assets/UI/partialscreenhooks.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_PLOTINFO">
+            <Items>
+                <File>Assets/UI/WorldView/plotinfo_CQUI.lua</File>
+                <File>Assets/UI/WorldView/plotinfo.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <!-- Firaxis added a ReplaceUIScript for PlotToolTip with LoadOrder 0; CQUI incorporated those changes so both could work together -->
+        <ImportFiles id="CQUI_IMPORT_FILES_PLOTTOOLTIP_BASEGAME">
+            <Properties>
+                <LoadOrder>50</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/UI/ToolTips/plottooltip_CQUI_basegame.lua</File>
+                <File>Assets/UI/ToolTips/plottooltip_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_PRODUCTIONPANEL">
+            <Items>
+                <File>Assets/UI/productionpanel.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_TECHCIVICCOMPLETEDPOPUP">
+            <Items>
+                <File>Assets/UI/Popups/techciviccompletedpopup.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_TECHCIVICSTREE">
+            <Items>
+                <File>Assets/UI/Screens/TechTree_CQUI.lua</File>
+                <File>Assets/UI/Screens/CivicsTree_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_TOPPANEL">
+            <Items>
+                <File>Assets/UI/toppanel_CQUI_basegame.lua</File>
+                <File>Assets/UI/toppanel_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <!-- Firaxis added a ReplaceUIScript for UnitFlagManager with LoadOrder 0; CQUI incorporated those changes so both could work together -->
+        <ImportFiles id="CQUI_IMPORT_FILES_UNITFLAGMANAGER">
+            <Properties>
+                <LoadOrder>50</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/UI/unitflagmanager_CQUI.lua</File>
+                <File>Assets/UI/unitflagmanager.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_UNITPANEL">
+            <Items>
+                <File>Assets/UI/Panels/unitpanel_CQUI_basegame.lua</File>
+                <File>Assets/UI/Panels/unitpanel_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_WONDERBUILTPOPUP">
+            <Items>
+                <File>Assets/UI/Popups/wonderbuiltpopup_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_WORLDINPUT">
+            <Items>
+                <File>Assets/UI/worldinput_CQUI_basegame.lua</File>
+                <File>Assets/UI/worldinput_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_WORLDTRACKER">
+            <Items>
+                <File>Assets/UI/WorldTracker_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_WORLDVIEWICONSMANAGER">
+            <Items>
+                <File>Assets/UI/WorldViewIconsManager_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <UpdateIcons id="CQUI_UPDATE_ICONS_FONTICONS">
+            <File>Assets/UI/Icons/FontIcons_CQUI.xml</File>
+        </UpdateIcons>
+
+        <!-- ============================== CQUI Expansion 1 (Rise and Fall) files ============================== -->
+        <ImportFiles id="CQUI_IMPORT_FILES_CITYBANNERMANAGER_EXP1" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion1/CityBanners/citybannermanager.xml</File>
+                <File>Assets/Expansion1/CityBanners/citybannerinstances.xml</File>
+                <File>Assets/Expansion1/CityBanners/cityreligioninstances.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP1_CITYPANELOVERVIEW" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion1/Replacements/citypaneloverview_expansion1_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP1_CITYPANEL" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion1/Replacements/CityPanel_Expansion1.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP1_CITYSTATES" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion1/Replacements/citystates.xml</File>
+                <File>Assets/Expansion1/Replacements/citystates_CQUI_expansion1.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP1_DIPLOMACYACTIONVIEW" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion1/Replacements/diplomacyactionview_CQUI_expansion1.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP1_DIPLOMACYRIBBON" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion1/Replacements/diplomacyribbon_CQUI_expansion1.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP1_GOVERNMENTSCREEN" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion1/Replacements/governmentscreen_CQUI_expansion1.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP1_LAUNCHBAR" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion1/Replacements/launchbar_CQUI_expansion1.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP1_PARTIALSCREENHOOKS" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion1/Replacements/partialscreenhooks_CQUI_expansion1.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP1_TOPPANEL" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion1/Replacements/toppanel_CQUI_expansion1.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP1_UNITPANEL" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion1/Replacements/unitpanel_CQUI_expansion1.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP1_WORLDINPUT" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion1/Replacements/worldinput_CQUI_expansion1.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <!--==============================  CQUI Expansion 1 and beyond files ============================== -->
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP1BEYOND_CITYPANELCULTURE" criteria="Expansion1AndBeyond">
+            <Properties>
+                <LoadOrder>150</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion1/Replacements/citypanelculture_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <!-- ============================== CQUI Expansion 2 (Gathering Storm) files ======================================== -->
+        <ImportFiles id="CQUI_IMPORT_FILES_CITYBANNERMANAGER_EXP2" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion2/CityBanners/citybannermanager.xml</File>
+                <File>Assets/Expansion2/CityBanners/citybannerinstances.xml</File>
+                <File>Assets/Expansion2/CityBanners/cityreligioninstances.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP2_CITYPANELOVERVIEW" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion2/Replacements/citypaneloverview_expansion2_CQUI.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP2_CITYPANEL" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <!-- This replaces the Firaxis CityPanel_Expansion1 found in the Expansion2 folder -->
+                <File>Assets/Expansion2/Replacements/CityPanel_Expansion1.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP2_CITYSTATES" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion2/Replacements/citystates.xml</File>
+                <File>Assets/Expansion2/Replacements/citystates_CQUI_expansion2.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP2_DIPLOMACYACTIONVIEW" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion2/Replacements/diplomacyactionview_CQUI_expansion2.lua</File>
+                <File>Assets/Expansion2/Replacements/diplomacyactionview.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP2_DIPLOMACYRIBBON" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion2/Replacements/diplomacyribbon_CQUI_expansion2.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP2_GOVERNMENTSCREEN" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion2/Replacements/governmentscreen_CQUI_expansion2.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP2_INGAME" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion2/Replacements/ingame.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP2_LAUNCHBAR" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion2/Replacements/launchbar_CQUI_expansion2.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP2_PARTIALSCREENHOOKS" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion2/Replacements/partialscreenhooks_CQUI_expansion2.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP2_PLOTTOOLTIP" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion2/Replacements/plottooltip_CQUI_expansion2.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP2_TOPPANEL" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion2/Replacements/toppanel_CQUI_expansion2.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP2_UNITPANEL" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion2/Replacements/unitpanel_CQUI_expansion2.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP2_WORLDINPUT" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Expansion2/Replacements/worldinput_CQUI_expansion2.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <UpdateIcons id="CQUI_UPDATE_ICONS_EXP2_FONTICONS" criteria="Expansion2">
+            <Properties><LoadOrder>200</LoadOrder></Properties>
+            <File>Assets/Expansion2/Data/Expansion2_Icons_FontIcons_CQUI.xml</File>
+        </UpdateIcons>
+
+        <!-- ============================== CQUI Heroes Mode files ======================================== -->
+        <ImportFiles id="CQUI_IMPORT_FILES_HEROES_MODE" criteria="Heroes_Mode">
+            <Properties>
+                <LoadOrder>250</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Assets/Babylon/Additions/GreatPeopleHeroPanel.lua</File>
+                <File>Assets/Babylon/Additions/GreatPeopleHeroPanel.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <!-- ============================== CQUI specific LOCs ============================== -->
+        <LocalizedText id="CQUI_TEXT">
+            <Items>
+                <File>Assets/Text/Gossip_Text.xml</File>
+                <File>Assets/Text/Gossip_Text_de.xml</File>
+                <File>Assets/Text/Gossip_Text_it.xml</File>
+                <File>Assets/Text/Gossip_Text_ja.xml</File>
+                <File>Assets/Text/Gossip_Text_pt.xml</File>
+                <File>Assets/Text/Gossip_Text_ru.xml</File>
+                <File>Assets/Text/cqui_InGameText.xml</File>
+                <File>Assets/Text/cqui_InGameText_de.xml</File>
+                <File>Assets/Text/cqui_InGameText_it.xml</File>
+                <File>Assets/Text/cqui_InGameText_ja.xml</File>
+                <File>Assets/Text/cqui_InGameText_ru.xml</File>
+                <File>Assets/Text/cqui_InGameText_zh.xml</File>
+                <File>Assets/Text/cqui_text_general.xml</File>
+                <File>Assets/Text/cqui_text_general_de.xml</File>
+                <File>Assets/Text/cqui_text_general_es.xml</File>
+                <File>Assets/Text/cqui_text_general_fr.xml</File>
+                <File>Assets/Text/cqui_text_general_it.xml</File>
+                <File>Assets/Text/cqui_text_general_ja.xml</File>
+                <File>Assets/Text/cqui_text_general_ko.xml</File>
+                <File>Assets/Text/cqui_text_general_pl.xml</File>
+                <File>Assets/Text/cqui_text_general_pt.xml</File>
+                <File>Assets/Text/cqui_text_general_ru.xml</File>
+                <File>Assets/Text/cqui_text_general_zh.xml</File>
+                <File>Assets/Text/cqui_text_settings.xml</File>
+                <File>Assets/Text/cqui_text_settings_de.xml</File>
+                <File>Assets/Text/cqui_text_settings_es.xml</File>
+                <File>Assets/Text/cqui_text_settings_fr.xml</File>
+                <File>Assets/Text/cqui_text_settings_it.xml</File>
+                <File>Assets/Text/cqui_text_settings_ja.xml</File>
+                <File>Assets/Text/cqui_text_settings_ko.xml</File>
+                <File>Assets/Text/cqui_text_settings_pl.xml</File>
+                <File>Assets/Text/cqui_text_settings_pt.xml</File>
+                <File>Assets/Text/cqui_text_settings_ru.xml</File>
+                <File>Assets/Text/cqui_text_settings_zh.xml</File>
+                <File>Assets/Text/cqui_diplomacy_text.xml</File>
+                <File>Assets/Text/cqui_diplomacy_text_de.xml</File>
+                <File>Assets/Text/cqui_diplomacy_text_es.xml</File>
+                <File>Assets/Text/cqui_diplomacy_text_fr.xml</File>
+                <File>Assets/Text/cqui_diplomacy_text_it.xml</File>
+                <File>Assets/Text/cqui_diplomacy_text_ja.xml</File>
+                <File>Assets/Text/cqui_diplomacy_text_ko.xml</File>
+                <File>Assets/Text/cqui_diplomacy_text_pl.xml</File>
+                <File>Assets/Text/cqui_diplomacy_text_pt.xml</File>
+                <File>Assets/Text/cqui_diplomacy_text_ru.xml</File>
+                <File>Assets/Text/cqui_diplomacy_text_zh.xml</File>
+            </Items>
+        </LocalizedText>
+
+        <!-- ============================== CQUI specific UIs ============================== -->
+        <ImportFiles id="CQUI_IMPORT_FILES_CQUI_SETTINGS_LENSCOLORS">
+            <Items>
+                <File>Assets/cqui_settingselement_lenscolors.xml</File>
+                <File>Assets/cqui_settingselement_lenscolors.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <AddUserInterfaces id="CQUI_UI">
+            <Properties>
+                <Context>InGame</Context>
+                <LoadOrder>11</LoadOrder>
+            </Properties>
+            <Items>
+                <File>Assets/cqui_settingselement.xml</File>
+                <!-- <File>Assets/cqui_settingselement.lua</File> --> <!-- implied load -->
+                <!-- cqui_settingselement_lenscolors XML and Lua are loaded by the respective cqui_settingselement XML and Lua via the Include mechanism -->
+                <File>Assets/cqui_toplayer.xml</File>
+                <File>Assets/UI/Popups/policyreminderpopup.xml</File>
+                <!--the lua files are taken as implied-->
+            </Items>
+        </AddUserInterfaces>
+
+        <!-- ==============================  CQUI specific scripts ============================== -->
+        <!-- NOTE: Is this declaration necessary any longer? -->
+        <!--       If so, note that if we require additional instances, we need separete GamePlayScripts entries -->
+        <!--       As the importer does not honor multiple entires listed in the Items/File section. -->
+        <GameplayScripts id="CQUI_SCRIPTS">
+            <Items>
+                <File>Assets/cqui_main.lua</File>
+            </Items>
+        </GameplayScripts>
+
+        <!-- ============================== CQUI specific art overrides ============================== -->
+        <ModArt id="CQUI_MODART">
+            <Items>
+                <File>CQUI.dep</File>
+            </Items>
+        </ModArt>
+
+        <!-- ============================== ReplaceUIScript Declarations ============================== -->
+        <ReplaceUIScript id="CQUI_CityPanelCulture_EXP1" criteria="Expansion1AndBeyond">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <LuaContext>CityPanelCulture</LuaContext>
+                <LuaReplace>Assets/Expansion1/Replacements/citypanelculture_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_CityPanelOverview_EXP1" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <LuaContext>CityPanelOverview</LuaContext>
+                <LuaReplace>Assets/Expansion1/Replacements/citypaneloverview_expansion1_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_CityPanelOverview_EXP2" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>CityPanelOverview</LuaContext>
+                <LuaReplace>Assets/Expansion2/Replacements/citypaneloverview_expansion2_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_CityStates">
+            <Properties>
+                <LuaContext>CityStates</LuaContext>
+                <LuaReplace>Assets/UI/PartialScreens/citystates_CQUI_basegame.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_CityStates_EXP1"  criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <LuaContext>CityStates</LuaContext>
+                <LuaReplace>Assets/Expansion1/Replacements/citystates_CQUI_expansion1.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_CityStates_EXP2"  criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>CityStates</LuaContext>
+                <LuaReplace>Assets/Expansion2/Replacements/citystates_CQUI_expansion2.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_CivicsChooser">
+            <Properties>
+                <LuaContext>CivicsChooser</LuaContext>
+                <LuaReplace>Assets/UI/Choosers/CivicsChooser_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_CivicsTree">
+            <Properties>
+                <LuaContext>CivicsTree</LuaContext>
+                <LuaReplace>Assets/UI/Screens/CivicsTree_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_CivicsTree_EXP2" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>CivicsTree</LuaContext>
+                <LuaReplace>Assets/UI/Screens/CivicsTree_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_DiplomacyActionView">
+            <Properties>
+                <LuaContext>DiplomacyActionView</LuaContext>
+                <LuaReplace>Assets/UI/diplomacyactionview_CQUI_basegame.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_DiplomacyActionView_EXP1" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <LuaContext>DiplomacyActionView</LuaContext>
+                <LuaReplace>Assets/Expansion1/Replacements/diplomacyactionview_CQUI_expansion1.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_DiplomacyActionView_EXP2" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>DiplomacyActionView</LuaContext>
+                <LuaReplace>Assets/Expansion2/Replacements/diplomacyactionview_CQUI_expansion2.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_DiplomacyRibbon">
+            <Properties>
+                <LuaContext>DiplomacyRibbon</LuaContext>
+                <LuaReplace>Assets/UI/diplomacyribbon_CQUI_basegame.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_DiplomacyRibbon_EXP1" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <LuaContext>DiplomacyRibbon</LuaContext>
+                <LuaReplace>Assets/Expansion1/Replacements/diplomacyribbon_CQUI_expansion1.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_DiplomacyRibbon_EXP2" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>DiplomacyRibbon</LuaContext>
+                <LuaReplace>Assets/Expansion2/Replacements/diplomacyribbon_CQUI_expansion2.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_DistrictPlotIconManager">
+            <Properties>
+                <!-- Ensure CQUI loads after the Vietnam / Kublai Khan mod -->
+                <LoadOrder>50</LoadOrder>
+                <LuaContext>DistrictPlotIconManager</LuaContext>
+                <LuaReplace>Assets/UI/WorldView/districtploticonmanager_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_GovernmentScreen">
+            <Properties>
+                <LuaContext>GovernmentScreen</LuaContext>
+                <LuaReplace>Assets/UI/Screens/governmentscreen_CQUI_basegame.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_GovernmentScreen_EXP1" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <LuaContext>GovernmentScreen</LuaContext>
+                <LuaReplace>Assets/Expansion1/Replacements/governmentscreen_CQUI_expansion1.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_GovernmentScreen_EXP2" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>GovernmentScreen</LuaContext>
+                <LuaReplace>Assets/Expansion2/Replacements/governmentscreen_CQUI_expansion2.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_InGameTopOptionsMenu">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>InGameTopOptionsMenu</LuaContext>
+                <LuaReplace>Assets/UI/Menus/InGameTopOptionsMenu_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_LaunchBar">
+            <Properties>
+                <LuaContext>LaunchBar</LuaContext>
+                <LuaReplace>Assets/UI/launchbar_CQUI_basegame.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_LaunchBar_EXP1" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <LuaContext>LaunchBar</LuaContext>
+                <LuaReplace>Assets/Expansion1/Replacements/launchbar_CQUI_expansion1.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_LaunchBar_EXP2" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>LaunchBar</LuaContext>
+                <LuaReplace>Assets/Expansion2/Replacements/launchbar_CQUI_expansion2.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_MapPinManager">
+            <Properties>
+                <LuaContext>MapPinManager</LuaContext>
+                <LuaReplace>Assets/UI/MapPinManager_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_Options">
+            <Properties>
+                <LuaContext>Options</LuaContext>
+                <LuaReplace>Assets/UI/Options_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_PartialScreenHooks">
+            <Properties>
+                <LuaContext>PartialScreenHooks</LuaContext>
+                <LuaReplace>Assets/UI/partialscreenhooks_CQUI_basegame.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_PartialScreenHooks_EXP1" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <LuaContext>PartialScreenHooks</LuaContext>
+                <LuaReplace>Assets/Expansion1/Replacements/partialscreenhooks_CQUI_expansion1.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_PartialScreenHooks_EXP2" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>PartialScreenHooks</LuaContext>
+                <LuaReplace>Assets/Expansion2/Replacements/partialscreenhooks_CQUI_expansion2.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_PlotInfo">
+            <Properties>
+                <LuaContext>PlotInfo</LuaContext>
+                <LuaReplace>Assets/UI/WorldView/plotinfo_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_PlotToolTip">
+            <Properties>
+                <!-- LoadOrder of 50 to ensure it loads after the Firaxis replacement for PlotToolTip bundled with the Barbarian Clans Mode -->
+                <LoadOrder>50</LoadOrder>
+                <LuaContext>PlotToolTip</LuaContext>
+                <LuaReplace>Assets/UI/ToolTips/plottooltip_CQUI_basegame.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_PlotToolTip_EXP2" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>PlotToolTip</LuaContext>
+                <LuaReplace>Assets/Expansion2/Replacements/plottooltip_CQUI_expansion2.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_ProductionPanel">
+            <Properties>
+                <LoadOrder>10</LoadOrder> <!-- to override the replacement from the Hero Mode -->
+                <LuaContext>ProductionPanel</LuaContext>
+                <LuaReplace>Assets/UI/Panels/productionpanel_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_ResearchChooser">
+            <Properties>
+                <LuaContext>ResearchChooser</LuaContext>
+                <LuaReplace>Assets/UI/Choosers/ResearchChooser_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_ResearchChooser_EXP1"  criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <LuaContext>ResearchChooser</LuaContext>
+                <LuaReplace>Assets/UI/Choosers/ResearchChooser_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_ResearchChooser_EXP2"  criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>ResearchChooser</LuaContext>
+                <LuaReplace>Assets/UI/Choosers/ResearchChooser_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_StatusMessagePanel">
+            <Properties>
+                <LuaContext>StatusMessagePanel</LuaContext>
+                <LuaReplace>Assets/UI/Panels/StatusMessagePanel_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_TechTree">
+            <Properties>
+                <LuaContext>TechTree</LuaContext>
+                <LuaReplace>Assets/UI/Screens/TechTree_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_TechTree_EXP1" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <LuaContext>TechTree</LuaContext>
+                <LuaReplace>Assets/UI/Screens/TechTree_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_TechTree_EXP2" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>TechTree</LuaContext>
+                <LuaReplace>Assets/UI/Screens/TechTree_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_TopPanel">
+            <Properties>
+                <LuaContext>TopPanel</LuaContext>
+                <LuaReplace>Assets/UI/toppanel_CQUI_basegame.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_TopPanel_EXP1" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <LuaContext>TopPanel</LuaContext>
+                <LuaReplace>Assets/Expansion1/Replacements/toppanel_CQUI_expansion1.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_TopPanel_EXP2" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>TopPanel</LuaContext>
+                <LuaReplace>Assets/Expansion2/Replacements/toppanel_CQUI_expansion2.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_UnitFlagManager">
+            <Properties>
+                <!-- Firaxis Barbarians Clans Mode has a LoadOrder 0 for their ReplaceUIScript of UnitFlagManager; files load at 50 above -->
+                <LoadOrder>50</LoadOrder>
+                <LuaContext>UnitFlagManager</LuaContext>
+                <LuaReplace>Assets/UI/unitflagmanager_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_UnitPanel">
+            <Properties>
+                <LuaContext>UnitPanel</LuaContext>
+                <LuaReplace>Assets/UI/Panels/unitpanel_CQUI_basegame.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_UnitPanel_EXP1" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <LuaContext>UnitPanel</LuaContext>
+                <LuaReplace>Assets/Expansion1/Replacements/unitpanel_CQUI_expansion1.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_UnitPanel_EXP2" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>UnitPanel</LuaContext>
+                <LuaReplace>Assets/Expansion2/Replacements/unitpanel_CQUI_expansion2.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_WonderBuiltPopup">
+            <Properties>
+                <LuaContext>WonderBuiltPopup</LuaContext>
+                <LuaReplace>Assets/UI/Popups/wonderbuiltpopup_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_WorldInput">
+            <Properties>
+                <LuaContext>WorldInput</LuaContext>
+                <LuaReplace>Assets/UI/worldinput_CQUI_basegame.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_WorldInput_EXP1" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <LuaContext>WorldInput</LuaContext>
+                <LuaReplace>Assets/Expansion1/Replacements/worldinput_CQUI_expansion1.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_WorldInput_EXP2" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>WorldInput</LuaContext>
+                <LuaReplace>Assets/Expansion2/Replacements/worldinput_CQUI_expansion2.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_WorldTracker">
+            <Properties>
+                <LuaContext>WorldTracker</LuaContext>
+                <LuaReplace>Assets/UI/WorldTracker_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_WorldTracker_EXP1" criteria="Expansion1">
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+                <LuaContext>WorldTracker</LuaContext>
+                <LuaReplace>Assets/UI/WorldTracker_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+        
+        <ReplaceUIScript id="CQUI_WorldTracker_EXP2" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>200</LoadOrder>
+                <LuaContext>WorldTracker</LuaContext>
+                <LuaReplace>Assets/UI/WorldTracker_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <ReplaceUIScript id="CQUI_WorldViewIconsManager">
+            <Properties>
+                <LuaContext>WorldViewIconsManager</LuaContext>
+                <LuaReplace>Assets/UI/WorldViewIconsManager_CQUI.lua</LuaReplace>
+            </Properties>
+        </ReplaceUIScript>
+
+        <!-- ============================== Mod integrations ======================================== -->
+        <!-- ============================== Better Trade Screen (BTS) ============================== -->
+        <LocalizedText id="CQUI_BTS_TEXT">
+            <Items>
+                <File>Integrations/BTS/Text/bts_text.xml</File>
+                <File>Integrations/BTS/Text/bts_text_de.xml</File>
+                <File>Integrations/BTS/Text/bts_text_es.xml</File>
+                <File>Integrations/BTS/Text/bts_text_fr.xml</File>
+                <File>Integrations/BTS/Text/bts_text_it.xml</File>
+                <File>Integrations/BTS/Text/bts_text_ja.xml</File>
+                <File>Integrations/BTS/Text/bts_text_ko.xml</File>
+                <File>Integrations/BTS/Text/bts_text_pl.xml</File>
+                <File>Integrations/BTS/Text/bts_text_pt.xml</File>
+                <File>Integrations/BTS/Text/bts_text_ru.xml</File>
+                <File>Integrations/BTS/Text/bts_text_zh.xml</File>
+            </Items>
+        </LocalizedText>
+        <ImportFiles id="CQUI_IMPORT_FILES_BTS">
+            <Items>
+                <File>Integrations/BTS/UI/tradeoverview.xml</File>
+                <File>Integrations/BTS/UI/tradeoverview.lua</File>
+                <File>Integrations/BTS/UI/tradesupport.lua</File>
+                <File>Integrations/BTS/UI/Choosers/traderoutechooser.xml</File>
+                <File>Integrations/BTS/UI/Choosers/traderoutechooser.lua</File>
+                <File>Integrations/BTS/UI/Choosers/tradeoriginchooser.xml</File>
+                <File>Integrations/BTS/UI/Choosers/tradeoriginchooser.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <!-- ============================== Better Espionoge Screen (BES) ============================== -->
+        <ImportFiles id="CQUI_IMPORT_FILES_BES">
+            <Items>
+                <File>Integrations/BES/UI/espionagesupport.lua</File>
+                <File>Integrations/BES/UI/Choosers/espionagechooser.lua</File>
+                <File>Integrations/BES/UI/Choosers/espionagechooser.xml</File>
+                <File>Integrations/BES/UI/PartialScreens/espionageoverview.lua</File>
+                <File>Integrations/BES/UI/PartialScreens/espionageoverview.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <LocalizedText id="CQUI_BES_TEXT">
+            <Items>
+                <File Priority="1">Integrations/BES/Text/bes_text.xml</File>
+                <File>Integrations/BES/Text/bes_text_de.xml</File>
+                <File>Integrations/BES/Text/bes_text_es.xml</File>
+                <File>Integrations/BES/Text/bes_text_fr.xml</File>
+                <File>Integrations/BES/Text/bes_text_it.xml</File>
+                <File>Integrations/BES/Text/bes_text_ja.xml</File>
+                <File>Integrations/BES/Text/bes_text_pt.xml</File>
+                <File>Integrations/BES/Text/bes_text_ru.xml</File>
+            </Items>
+        </LocalizedText>
+
+        <!-- ============================== MoreLenses (ML) ============================== -->
+        <AddUserInterfaces id="CQUI_MORELENSES_LENSES_WPANEL">
+            <Properties>
+                <Context>InGame</Context>
+                <LoadOrder>101</LoadOrder>
+            </Properties>
+            <Items>
+                <File>Integrations/ML/Lenses/CityOverlap/ModLens_CityOverlap.xml</File>
+                <!-- ModLens_CityOverlap.lua implied -->
+                <File>Integrations/ML/Lenses/Resource/ModLens_Resource.xml</File>
+            </Items>
+        </AddUserInterfaces>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_MORELENSES_LENSES">
+            <Properties>
+                <LoadOrder>10</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Integrations/ML/Lenses/Builder/ModLens_Builder.lua</File>
+                <File>Integrations/ML/Lenses/Scout/ModLens_Scout.lua</File>
+                <File>Integrations/ML/Lenses/Archaeologist/ModLens_Archaeologist.lua</File>
+                <File>Integrations/ML/Lenses/Barbarian/ModLens_Barbarian.lua</File>
+                <File>Integrations/ML/Lenses/Naturalist/ModLens_Naturalist.lua</File>
+                <File>Integrations/ML/Lenses/Routes/ModLens_Routes.lua</File>
+                <File>Integrations/ML/Lenses/Wonder/ModLens_Wonder.lua</File>
+                <File>Integrations/ML/Lenses/CQUI_CitizenManagement/ModLens_CQUI_CitizenManagement.lua</File>
+                <File>Integrations/ML/Lenses/UnitAction/ModLens_UnitAction.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_MORELENSES_LENSES_BUILDER_CONIFG">
+            <Properties>
+                <LoadOrder>9</LoadOrder>
+                <Context>InGame</Context>
+            </Properties>
+            <Items>
+                <File>Integrations/ML/Lenses/LensSupport.lua</File>
+                <File>Integrations/ML/Lenses/Builder/BuilderLens_Config_Default.lua</File>
+                <File>Integrations/ML/Lenses/Builder/BuilderLens_Support.lua</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_MORELENSES_PANELS">
+            <!-- ML replacements after all lens files imported -->
+            <Properties>
+                <LoadOrder>100</LoadOrder>
+            </Properties>
+            <Items>
+                <File>Integrations/ML/UI/minimappanel.lua</File>
+                <File>Integrations/ML/UI/minimappanel.xml</File>
+                <File>Integrations/ML/UI/Panels/modallenspanel.lua</File>
+                <File>Integrations/ML/UI/Panels/modallenspanel.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP1_MORELENSES_MINIMAPPANEL" criteria="Expansion1AndBeyond">
+            <Properties>
+                <LoadOrder>101</LoadOrder>
+            </Properties>
+            <Items>
+                <File>Integrations/ML/DLC/Expansion1/UI/Replacements/minimappanel.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <ImportFiles id="CQUI_IMPORT_FILES_EXP2_MORELENSES_MINIMAPPANEL" criteria="Expansion2">
+            <Properties>
+                <LoadOrder>102</LoadOrder>
+            </Properties>
+            <Items>
+                <File>Integrations/ML/DLC/Expansion2/UI/Replacements/minimappanel.xml</File>
+            </Items>
+        </ImportFiles>
+
+        <LocalizedText id="CQUI_MORELENSES_TEXT">
+            <Items>
+                <File Priority="1">Integrations/ML/Text/morelenses_text.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_de.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_es.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_fr.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_it.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_ja.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_ko.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_pl.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_pt.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_ru.xml</File>
+                <File>Integrations/ML/Text/morelenses_text_zh.xml</File>
+            </Items>
+        </LocalizedText>
+
+        <UpdateDatabase id="CQUI_MORELENSES_DATABASE">
+            <Items>
+                <File>Integrations/ML/morelenses_colors.sql</File>
+            </Items>
+        </UpdateDatabase>
+        <!-- ============================== End of ML ============================== -->
+        <!-- </Components> -->
+    </InGameActions>
+
+    <Settings />
+
+    <!-- Complete File Manifest -->
+    <Files>
+        <!-- See note before the UpdateDatabase section above -->
+        <File>../cqui_settings_local.sql</File>
+        <File>CQUI.dep</File>
+        <File>Assets/cqui_databaseschema.sql</File>
+        <File>Assets/cqui_data.sql</File>
+        <File>Assets/cqui_settings.sql</File>
+        <File>Assets/cqui_settingselement.lua</File>
+        <File>Assets/cqui_settingselement.xml</File>
+        <File>Assets/cqui_settingselement_lenscolors.lua</File>
+        <File>Assets/cqui_settingselement_lenscolors.xml</File>
+        <File>Assets/cqui_main.lua</File>
+        <File>Assets/cqui_toplayer.xml</File>
+        <File>Assets/cqui_toplayer.lua</File>
+        <File>Assets/UI/CQUICommon.lua</File>
+        <File>Assets/UI/Options_CQUI.lua</File>
+        <File>Assets/UI/options.xml</File>
+        <File>Assets/UI/Menus/InGameTopOptionsMenu_CQUI.lua</File>
+
+        <!-- EXP 1 -->
+        <File>Assets/Expansion1/CityBanners/citybannermanager.xml</File>
+        <File>Assets/Expansion1/CityBanners/citybannerinstances.xml</File>
+        <File>Assets/Expansion1/CityBanners/cityreligioninstances.xml</File>
+        <File>Assets/Expansion1/Replacements/CityPanel_Expansion1.lua</File>
+        <File>Assets/Expansion1/Replacements/citypanelculture_CQUI.lua</File>
+        <File>Assets/Expansion1/Replacements/citypaneloverview_expansion1_CQUI.lua</File>
+        <File>Assets/Expansion1/Replacements/citystates.xml</File>
+        <File>Assets/Expansion1/Replacements/citystates_CQUI_expansion1.lua</File>
+        <File>Assets/Expansion1/Replacements/diplomacyactionview_CQUI_expansion1.lua</File>
+        <File>Assets/Expansion1/Replacements/diplomacyribbon_CQUI_expansion1.lua</File>
+        <File>Assets/Expansion1/Replacements/governmentscreen_CQUI_expansion1.lua</File>
+        <File>Assets/Expansion1/Replacements/launchbar_CQUI_expansion1.lua</File>
+        <File>Assets/Expansion1/Replacements/partialscreenhooks_CQUI_expansion1.lua</File>
+        <File>Assets/Expansion1/Replacements/toppanel_CQUI_expansion1.lua</File>
+        <File>Assets/Expansion1/Replacements/unitpanel_CQUI_expansion1.lua</File>
+        <File>Assets/Expansion1/Replacements/worldinput_CQUI_expansion1.lua</File>
+
+        <!-- EXP 2 -->
+        <File>Assets/Expansion2/Replacements/CityPanel_Expansion1.lua</File>
+        <File>Assets/Expansion2/Replacements/citypaneloverview_expansion2_CQUI.lua</File>
+        <File>Assets/Expansion2/Replacements/citystates.xml</File>
+        <File>Assets/Expansion2/Replacements/citystates_CQUI_expansion2.lua</File>
+        <File>Assets/Expansion2/Replacements/diplomacyactionview_CQUI_expansion2.lua</File>
+        <File>Assets/Expansion2/Replacements/diplomacyactionview.xml</File>
+        <File>Assets/Expansion2/Replacements/diplomacyribbon_CQUI_expansion2.lua</File>
+        <File>Assets/Expansion2/Replacements/governmentscreen_CQUI_expansion2.lua</File>
+        <File>Assets/Expansion2/Replacements/ingame.lua</File>
+        <File>Assets/Expansion2/Replacements/launchbar_CQUI_expansion2.lua</File>
+        <File>Assets/Expansion2/Replacements/partialscreenhooks_CQUI_expansion2.lua</File>
+        <File>Assets/Expansion2/Replacements/plottooltip_CQUI_expansion2.lua</File>
+        <File>Assets/Expansion2/Replacements/toppanel_CQUI_expansion2.lua</File>
+        <File>Assets/Expansion2/Replacements/unitpanel_CQUI_expansion2.lua</File>
+        <File>Assets/Expansion2/Replacements/worldinput_CQUI_expansion2.lua</File>
+        <File>Assets/Expansion2/CityBanners/citybannermanager.xml</File>
+        <File>Assets/Expansion2/CityBanners/citybannerinstances.xml</File>
+        <File>Assets/Expansion2/CityBanners/cityreligioninstances.xml</File>
+        <File>Assets/Expansion2/Data/Expansion2_Icons_FontIcons_CQUI.xml</File>
+
+        <!-- Heroes Mode -->
+        <File>Assets/Babylon/Additions/GreatPeopleHeroPanel.lua</File>
+        <File>Assets/Babylon/Additions/GreatPeopleHeroPanel.xml</File>
+
+        <File>Assets/Text/Gossip_Text.xml</File>
+        <File>Assets/Text/Gossip_Text_de.xml</File>
+        <File>Assets/Text/Gossip_Text_it.xml</File>
+        <File>Assets/Text/Gossip_Text_ja.xml</File>
+        <File>Assets/Text/Gossip_Text_pt.xml</File>
+        <File>Assets/Text/Gossip_Text_ru.xml</File>
+        <File>Assets/Text/cqui_InGameText.xml</File>
+        <File>Assets/Text/cqui_InGameText_de.xml</File>
+        <File>Assets/Text/cqui_InGameText_it.xml</File>
+        <File>Assets/Text/cqui_InGameText_ja.xml</File>
+        <File>Assets/Text/cqui_InGameText_ru.xml</File>
+        <File>Assets/Text/cqui_text_general.xml</File>
+        <File>Assets/Text/cqui_text_general_de.xml</File>
+        <File>Assets/Text/cqui_text_general_es.xml</File>
+        <File>Assets/Text/cqui_text_general_fr.xml</File>
+        <File>Assets/Text/cqui_text_general_it.xml</File>
+        <File>Assets/Text/cqui_text_general_ja.xml</File>
+        <File>Assets/Text/cqui_text_general_ko.xml</File>
+        <File>Assets/Text/cqui_text_general_pl.xml</File>
+        <File>Assets/Text/cqui_text_general_pt.xml</File>
+        <File>Assets/Text/cqui_text_general_ru.xml</File>
+        <File>Assets/Text/cqui_text_general_zh.xml</File>
+        <File>Assets/Text/cqui_text_settings.xml</File>
+        <File>Assets/Text/cqui_text_settings_de.xml</File>
+        <File>Assets/Text/cqui_text_settings_es.xml</File>
+        <File>Assets/Text/cqui_text_settings_fr.xml</File>
+        <File>Assets/Text/cqui_text_settings_it.xml</File>
+        <File>Assets/Text/cqui_text_settings_ja.xml</File>
+        <File>Assets/Text/cqui_text_settings_ko.xml</File>
+        <File>Assets/Text/cqui_text_settings_pl.xml</File>
+        <File>Assets/Text/cqui_text_settings_pt.xml</File>
+        <File>Assets/Text/cqui_text_settings_ru.xml</File>
+        <File>Assets/Text/cqui_text_settings_zh.xml</File>
+        <File>Assets/Text/cqui_diplomacy_text.xml</File>
+        <File>Assets/Text/cqui_diplomacy_text_de.xml</File>
+        <File>Assets/Text/cqui_diplomacy_text_es.xml</File>
+        <File>Assets/Text/cqui_diplomacy_text_fr.xml</File>
+        <File>Assets/Text/cqui_diplomacy_text_it.xml</File>
+        <File>Assets/Text/cqui_diplomacy_text_ja.xml</File>
+        <File>Assets/Text/cqui_diplomacy_text_ko.xml</File>
+        <File>Assets/Text/cqui_diplomacy_text_pl.xml</File>
+        <File>Assets/Text/cqui_diplomacy_text_pt.xml</File>
+        <File>Assets/Text/cqui_diplomacy_text_ru.xml</File>
+        <File>Assets/Text/cqui_diplomacy_text_zh.xml</File>
+
+        <File>Assets/Texture/CQUI_GreatPeople_Background_Bottom.dds</File>
+        <File>Assets/Texture/CQUI_GreatPeople_Background_Repeat_Bottom.dds</File>
+        <File>Assets/Texture/CQUI_GreatPeople_Background_Repeat_Top.dds</File>
+        <File>Assets/Texture/CQUI_GreatPeople_Background_Top.dds</File>
+        <File>Assets/Texture/CQUI_Heroes_Background_Bottom.dds</File>
+        <File>Assets/Texture/CQUI_Heroes_Background_Repeat_Bottom.dds</File>
+        <File>Assets/Texture/CQUI_Heroes_Background_Repeat_Top.dds</File>
+        <File>Assets/Texture/CQUI_Heroes_Background_Top.dds</File>
+
+        <!-- BASE -->
+        <File>Assets/UI/actionpanel.lua</File>
+        <File>Assets/UI/diplomacyactionview_CQUI_basegame.lua</File>
+        <File>Assets/UI/diplomacyactionview_CQUI.lua</File>
+        <File>Assets/UI/diplomacyactionview.xml</File>
+        <File>Assets/UI/DiplomacyDealView_CQUI.lua</File>
+        <File>Assets/UI/diplomacydealview.xml</File>
+        <File>Assets/UI/diplomacyribbon_CQUI_basegame.lua</File>
+        <File>Assets/UI/diplomacyribbon_CQUI.lua</File>
+        <File>Assets/UI/ingame.lua</File>
+        <File>Assets/UI/launchbar_CQUI_basegame.lua</File>
+        <File>Assets/UI/launchbar_CQUI.lua</File>
+        <File>Assets/UI/launchbar.xml</File>
+        <File>Assets/UI/MapPinManager_CQUI.lua</File>
+        <File>Assets/UI/partialscreenhooks_CQUI_basegame.lua</File>
+        <File>Assets/UI/partialscreenhooks_CQUI.lua</File>
+        <File>Assets/UI/partialscreenhooks.xml</File>
+        <File>Assets/UI/productionpanel.xml</File>
+        <File>Assets/UI/toppanel_CQUI_basegame.lua</File>
+        <File>Assets/UI/toppanel_CQUI.lua</File>
+        <File>Assets/UI/unitflagmanager_CQUI.lua</File>
+        <File>Assets/UI/unitflagmanager.xml</File>
+        <File>Assets/UI/worldinput_CQUI_basegame.lua</File>
+        <File>Assets/UI/worldinput_CQUI.lua</File>
+        <File>Assets/UI/WorldTracker_CQUI.lua</File>
+        <File>Assets/UI/WorldViewIconsManager_CQUI.lua</File>
+        <File>Assets/UI/Choosers/CivicsChooser_CQUI.lua</File>
+        <File>Assets/UI/Choosers/ResearchChooser_CQUI.lua</File>
+        <File>Assets/UI/Civilopedia/civilopediasupport_CQUI.lua</File>
+        <File>Assets/UI/Civilopedia/civilopediascreen.lua</File>
+        <File>Assets/UI/Panels/citypanel.lua</File>
+        <File>Assets/UI/Panels/citypanel.xml</File>
+        <File>Assets/UI/Panels/citypaneloverview.lua</File>
+        <File>Assets/UI/Panels/citypaneloverview.xml</File>
+        <File>Assets/UI/Panels/NotificationPanel_CQUI.lua</File>
+        <File>Assets/UI/Panels/productionpanel_CQUI.lua</File>
+        <File>Assets/UI/Panels/StatusMessagePanel_CQUI.lua</File>
+        <File>Assets/UI/Panels/statusmessagepanel.xml</File>
+        <File>Assets/UI/Panels/unitpanel_CQUI_basegame.lua</File>
+        <File>Assets/UI/Panels/unitpanel_CQUI.lua</File>
+        <File>Assets/UI/PartialScreens/citystates_CQUI_basegame.lua</File>
+        <File>Assets/UI/PartialScreens/citystates_CQUI.lua</File>
+        <File>Assets/UI/PartialScreens/citystates.xml</File>
+        <File>Assets/UI/Popups/greatpeoplepopup.lua</File>
+        <File>Assets/UI/Popups/greatpeoplepopup.xml</File>
+        <File>Assets/UI/Popups/policyreminderpopup.lua</File>
+        <File>Assets/UI/Popups/policyreminderpopup.xml</File>
+        <File>Assets/UI/Popups/techciviccompletedpopup.lua</File>
+        <File>Assets/UI/Popups/wonderbuiltpopup_CQUI.lua</File>
+        <File>Assets/UI/Screens/CivicsTree_CQUI.lua</File>
+        <File>Assets/UI/Screens/governmentscreen_CQUI_basegame.lua</File>
+        <File>Assets/UI/Screens/governmentscreen_CQUI.lua</File>
+        <File>Assets/UI/Screens/TechTree_CQUI.lua</File>
+        <File>Assets/UI/ToolTips/plottooltip_CQUI_basegame.lua</File>
+        <File>Assets/UI/ToolTips/plottooltip_CQUI.lua</File>
+        <File>Assets/UI/Utilities/extendedrelationship.lua</File>
+        <File>Assets/UI/WorldView/CityBannerManager_CQUI.lua</File>
+        <File>Assets/UI/WorldView/citybannermanager.xml</File>
+        <!-- Placeholder for future work -->
+        <!-- <File>Assets/UI/WorldView/citybannerinstances.xml</File> -->
+        <!-- <File>Assets/UI/WorldView/cityreligioninstances.xml</File> -->
+        <File>Assets/UI/WorldView/districtploticonmanager_CQUI.lua</File>
+        <File>Assets/UI/WorldView/plotinfo_CQUI.lua</File>
+        <File>Assets/UI/WorldView/plotinfo.xml</File>
+        <File>Assets/UI/Icons/FontIcons_CQUI.xml</File>
+        
+        <!-- Integrations -->
+        <File>Integrations/BTS/UI/tradeoverview.xml</File>
+        <File>Integrations/BTS/UI/tradeoverview.lua</File>
+        <File>Integrations/BTS/UI/tradesupport.lua</File>
+        <File>Integrations/BTS/UI/Choosers/traderoutechooser.xml</File>
+        <File>Integrations/BTS/UI/Choosers/traderoutechooser.lua</File>
+        <File>Integrations/BTS/UI/Choosers/tradeoriginchooser.xml</File>
+        <File>Integrations/BTS/UI/Choosers/tradeoriginchooser.lua</File>
+        <File>Integrations/BTS/Text/bts_text.xml</File>
+        <File>Integrations/BTS/Text/bts_text_de.xml</File>
+        <File>Integrations/BTS/Text/bts_text_es.xml</File>
+        <File>Integrations/BTS/Text/bts_text_fr.xml</File>
+        <File>Integrations/BTS/Text/bts_text_it.xml</File>
+        <File>Integrations/BTS/Text/bts_text_ja.xml</File>
+        <File>Integrations/BTS/Text/bts_text_ko.xml</File>
+        <File>Integrations/BTS/Text/bts_text_pl.xml</File>
+        <File>Integrations/BTS/Text/bts_text_pt.xml</File>
+        <File>Integrations/BTS/Text/bts_text_ru.xml</File>
+        <File>Integrations/BTS/Text/bts_text_zh.xml</File>
+        <File>Integrations/ML/Text/morelenses_text.xml</File>
+        <File>Integrations/ML/Text/morelenses_text_de.xml</File>
+        <File>Integrations/ML/Text/morelenses_text_es.xml</File>
+        <File>Integrations/ML/Text/morelenses_text_fr.xml</File>
+        <File>Integrations/ML/Text/morelenses_text_it.xml</File>
+        <File>Integrations/ML/Text/morelenses_text_ja.xml</File>
+        <File>Integrations/ML/Text/morelenses_text_ko.xml</File>
+        <File>Integrations/ML/Text/morelenses_text_pl.xml</File>
+        <File>Integrations/ML/Text/morelenses_text_pt.xml</File>
+        <File>Integrations/ML/Text/morelenses_text_ru.xml</File>
+        <File>Integrations/ML/Text/morelenses_text_zh.xml</File>
+        <File>Integrations/ML/UI/hotkey_config.xml</File>
+        <File>Integrations/ML/UI/minimappanel.lua</File>
+        <File>Integrations/ML/UI/minimappanel.xml</File>
+        <File>Integrations/ML/UI/Panels/modallenspanel.lua</File>
+        <File>Integrations/ML/UI/Panels/modallenspanel.xml</File>
+        <File>Integrations/ML/morelenses_colors.sql</File>
+        <File>Integrations/ML/Lenses/LensSupport.lua</File>
+        <File>Integrations/ML/Lenses/Archaeologist/ModLens_Archaeologist.lua</File>
+        <File>Integrations/ML/Lenses/Barbarian/ModLens_Barbarian.lua</File>
+        <File>Integrations/ML/Lenses/Builder/ModLens_Builder.lua</File>
+        <File>Integrations/ML/Lenses/Builder/BuilderLens_Config_Default.lua</File>
+        <File>Integrations/ML/Lenses/Builder/BuilderLens_Support.lua</File>
+        <File>Integrations/ML/Lenses/CityOverlap/ModLens_CityOverlap.xml</File>
+        <File>Integrations/ML/Lenses/CityOverlap/ModLens_CityOverlap.lua</File>
+        <File>Integrations/ML/Lenses/CQUI_CitizenManagement/ModLens_CQUI_CitizenManagement.lua</File>
+        <File>Integrations/ML/Lenses/Naturalist/ModLens_Naturalist.lua</File>
+        <File>Integrations/ML/Lenses/Routes/ModLens_Routes.lua</File>
+        <File>Integrations/ML/Lenses/Resource/ModLens_Resource.xml</File>
+        <File>Integrations/ML/Lenses/Resource/ModLens_Resource.lua</File>
+        <File>Integrations/ML/Lenses/Scout/ModLens_Scout.lua</File>
+        <File>Integrations/ML/Lenses/UnitAction/ModLens_UnitAction.lua</File>
+        <File>Integrations/ML/Lenses/Wonder/ModLens_Wonder.lua</File>
+        <File>Integrations/ML/DLC/Expansion1/UI/Replacements/minimappanel.xml</File>
+        <File>Integrations/ML/DLC/Expansion2/UI/Replacements/minimappanel.xml</File>
+        <File>Integrations/BES/UI/espionagesupport.lua</File>
+        <File>Integrations/BES/UI/Choosers/espionagechooser.lua</File>
+        <File>Integrations/BES/UI/Choosers/espionagechooser.xml</File>
+        <File>Integrations/BES/UI/PartialScreens/espionageoverview.lua</File>
+        <File>Integrations/BES/UI/PartialScreens/espionageoverview.xml</File>
+        <File>Integrations/BES/Text/bes_text.xml</File>
+        <File>Integrations/BES/Text/bes_text_de.xml</File>
+        <File>Integrations/BES/Text/bes_text_es.xml</File>
+        <File>Integrations/BES/Text/bes_text_fr.xml</File>
+        <File>Integrations/BES/Text/bes_text_it.xml</File>
+        <File>Integrations/BES/Text/bes_text_ja.xml</File>
+        <File>Integrations/BES/Text/bes_text_pt.xml</File>
+        <File>Integrations/BES/Text/bes_text_ru.xml</File>
+    </Files>
+</Mod>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+  <GlobalParameters>
+    <Delete Name="BARBARIAN_BOLDNESS_PER_SCOUT_LOST"/>
+    <Replace Name="BARBARIAN_BOLDNESS_PER_SCOUT_LOST" Value="-10"/>
+    <Delete Name="BARBARIAN_CAMP_MINIMUM_DISTANCE_ANOTHER_CAMP"/>
+    <Replace Name="BARBARIAN_CAMP_MINIMUM_DISTANCE_ANOTHER_CAMP" Value="6"/>
+    <Delete Name="BARBARIAN_CAMP_MINIMUM_DISTANCE_CITY"/>
+    <Replace Name="BARBARIAN_CAMP_MINIMUM_DISTANCE_CITY" Value="7"/>
+    <Delete Name="START_DISTANCE_MAJOR_CIVILIZATION"/>
+    <Replace Name="START_DISTANCE_MAJOR_CIVILIZATION" Value="20"/>
+  </GlobalParameters>
+</GameInfo>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <LocalizedText>
+    <!-- GERMAN -->
+    <Replace Tag="LOC_CQUI_NAME" Language="de_DE">
+      <Text>CQUI</Text>
+    </Replace>
+
+    <!-- MESSAGES -->
+    <Replace Tag="LOC_CQUI_CIVIC_MESSAGE_S" Language="de_DE">
+      <Text>Die gegenwärtige Ausrichtung "</Text>
+    </Replace>
+    <Replace Tag="LOC_CQUI_TECH_MESSAGE_S" Language="de_DE">
+      <Text>Die Erforschung der Technologie "</Text>
+    </Replace>
+    <Replace Tag="LOC_CQUI_HALF_MESSAGE_E" Language="de_DE">
+      <Text>" ist eine Runde vom maximalen Inspirations-Bonus entfernt.</Text>
+    </Replace>
+    <Replace Tag="LOC_CQUI_FINISH_MESSAGE_E" Language="de_DE">
+      <Text>" ist abgeschlossen.</Text>
+    </Replace>
+
+    <!-- CITY PANEL -->
+    <Replace Tag="LOC_CQUI_CITY_ENTERTAINMENT" Language="de_DE">
+      <Text>Unterhaltung</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_CITY_FROM_POPULATION" Language="de_DE">
+      <Text>durch Bevölkerung</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_CITY_RELIGIOUS_MINORITIES" Language="de_DE">
+      <Text>Religiöse Minderheiten</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_CITY_PILLAGED" Language="de_DE">
+      <Text>[COLOR:StatBadCS](geplündert)[ENDCOLOR]</Text>
+    </Replace>
+
+    <!-- CITY VIEW -->
+    <Replace Tag="LOC_HUD_CITY_NEXT_PLOT" Language="de_DE">
+      <Text>Hierhin wird sich die Stadt bei der nächsten Grenzausdehnung (Kultur) erweitern.</Text>
+    </Replace>
+
+    <!-- POPUPS -->
+    <Replace Tag="LOC_CQUI_GREAT_PERSON_PROGRESS" Language="de_DE">
+      <Text>Fortschritt:</Text>
+    </Replace>
+
+    <!-- ActionPanel -->
+    <Replace Tag="LOC_CQUI_ACTION_PANEL_ENCAMPMENT_RANGED_ATTACK" Language="de_DE">
+      <Text>Fernangriff durch Lager</Text>
+    </Replace>
+    <Replace Tag="LOC_CQUI_ACTION_PANEL_ENCAMPMENT_RANGED_ATTACK_TOOLTIP" Language="de_DE">
+      <Text>Das Lager kann einen Fernangriff ausführen.</Text>
+    </Replace>
+
+    <!-- Policyreminderpopup -->
+    <Replace Tag="LOC_POLICY_REMINDER_TITLE" Language="de_DE">
+		  <Text>Politik-Erinnerung</Text>
+    </Replace>
+    <Replace Tag="LOC_POLICY_REMINDER_TEXT" Language="de_DE">
+      <Text>Neue Politik-Optionen stehen zur Auswahl.</Text>
+    </Replace>
+    <Replace Tag="LOC_POLICY_REMINDER_ACTION_BUTTON" Language="de_DE">
+      <Text>Politik ändern</Text>
+    </Replace>
+    <Replace Tag="LOC_POLICY_REMINDER_ACTION_BUTTON_TOOLTIP" Language="de_DE">
+      <Text>Die Politik kann diese Runder verändert werden.</Text>
+    </Replace>
+    
+    <!-- Diplomacy View -->
+    <Row Tag="LOC_CQUI_DIPLOMACY_VIEW_TOTAL_SCORE_PER_TURN_TEXT" Language="de_DE">
+      <Text>Gesammt</Text>
+    </Row>
+
+    <!-- Smartbanner unlocked citizen -->
+    <Row Tag="LOC_CQUI_SMARTBANNER_UNLOCKEDCITIZEN_TOOLTIP" Language="de_DE">
+      <Text>Es gibt neue Bewohner, die automatisch von der Stadtverwalter-KI zugeteilt wurden.</Text>
+    </Row>
+    
+    <!-- #62 Infixo original owner tooltip -->
+    <Row Tag="LOC_CQUI_CITY_BANNER_ORIGINAL_CAPITAL_TT" Language="de_DE">
+        <Text>[NEWLINE][ICON_Bullet]Ursprüngliche Hauptstadt von {1_OriginalOwner}</Text>
+    </Row>
+    <Row Tag="LOC_CQUI_CITY_BANNER_ORIGINAL_CITY_TT" Language="de_DE">
+        <Text>[NEWLINE][ICON_Bullet]Ursprüngliche Stadt von {1_OriginalOwner}</Text>
+    </Row>
+    
+    <!-- #75 Infixo tourism info in the plot tooltip -->
+    <Row Tag="LOC_CQUI_TOOLTIP_PLOT_IMPROVE_RESOURCE" Language="de_DE">
+        <Text>[COLOR:Civ6Red]Verbessere oder repariere das Feld, um die Ressource zu gewinnen[ENDCOLOR]</Text>
+    </Row>
+    
+    <!-- #177 Infixo goody hut rewards -->
+    <Row Tag="LOC_GOODYHUT_CIVIC_BOOST_DESCRIPTION" Language="de_DE">
+        <Text>Der [ICON_CivicBoosted] Inspirationsmoment für {1_Num} {1_Num: plural 1?random Ausrichtung; other?random Ausrichtungen;}</Text>
+    </Row>
+    <Row Tag="LOC_GOODYHUT_TECH_BOOST_DESCRIPTION" Language="de_DE">
+        <Text>Der [ICON_TechBoosted] Heurekamoment für {1_Num} {1_Num: plural 1?random Technologie; other?random Technologien;}</Text>
+    </Row>
+    <Row Tag="LOC_GOODYHUT_STRATEGIC_RESOURCES_DESCRIPTION" Language="de_DE">
+        <Text>+{1_Num} fortgeschrittenste strategische Ressourcen</Text>
+    </Row>
+
+  </LocalizedText>
+</GameData>

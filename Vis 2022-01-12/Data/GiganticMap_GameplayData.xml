@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+  <Types>
+    <Row Type="MAPSIZE_GIGANTIC" Kind="KIND_MAPSIZE"/>
+  </Types>
+  <Maps>
+    <Row MapSizeType="MAPSIZE_GIGANTIC" Name="Giant As Fuck" Description="Giant as fucking fuck, nor for Marks' laptops" DefaultPlayers="8" GridWidth="120" GridHeight="75" NumNaturalWonders="10" PlateValue="6" Continents="8"/>
+  </Maps>
+  <Map_GreatPersonClasses>
+    <!--Prophets are additionally limited by the number of beliefs in the game, which may override values here if they are too large-->
+    <Row MapSizeType="MAPSIZE_GIGANTIC" GreatPersonClassType="GREAT_PERSON_CLASS_PROPHET" MaxWorldInstances="8"/>
+  </Map_GreatPersonClasses>
+</GameInfo>

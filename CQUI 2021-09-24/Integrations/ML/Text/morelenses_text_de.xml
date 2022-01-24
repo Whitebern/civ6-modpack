@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <LocalizedText>
+    <!-- GERMAN -->
+    
+    <!-- Missing Citizen management Lens -->
+    <Replace Tag="LOC_HUD_CITIZEN_MANAGEMENT_LENS" Language="de_DE">
+       <Text>Handwerker</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_CITIZEN_MANAGEMENT_LENS_TOOLTIP" Language="de_DE">
+       <Text>Zeigt besondere Felder auf der Karte an, wo gebaut werden kann.</Text>
+    </Replace>
+
+    <!-- Builder Lens -->
+    <Replace Tag="LOC_HUD_BUILDER_LENS" Language="de_DE">
+      <Text>Handwerker</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_BUILDER_LENS_TOOLTIP" Language="de_DE">
+      <Text>Zeigt besondere Felder auf der Karte an, wo gebaut werden kann.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_BUILDER_LENS_PN" Language="de_DE">
+       <Text>Nichts</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_BUILDER_LENS_PD" Language="de_DE">
+       <Text>Gefährlich</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_BUILDER_LENS_P1" Language="de_DE">
+       <!-- Intentionally empty so it does not appear on the CQUI Settings menu --> 
+       <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_BUILDER_LENS_P1B" Language="de_DE">
+       <Text>Bonusressourcen</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_BUILDER_LENS_P1L" Language="de_DE">
+       <Text>Luxusressourcen</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_BUILDER_LENS_P1S" Language="de_DE">
+       <Text>Strategischeressourcen</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_BUILDER_LENS_P2" Language="de_DE">
+       <Text>Ressource, Einzig. Fähigk., Geplündert</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_BUILDER_LENS_P3" Language="de_DE">
+       <Text>Currently Worked, Wonder-Buffed</Text><!-- Braucht mehr Infos für akkurate Übersetzung --> 
+    </Replace>
+    <Replace Tag="LOC_HUD_BUILDER_LENS_P4" Language="de_DE">
+       <Text>Hügel</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_BUILDER_LENS_P5" Language="de_DE">
+       <Text>Entfernbare Geländeart</Text>
+    </Replace>
+    <!-- Nothing to add here atm -->
+    <Replace Tag="LOC_HUD_BUILDER_LENS_P6" Language="de_DE">
+       <!-- Intentionally empty so it does not appear on the CQUI Settings menu --> 
+       <Text></Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_BUILDER_LENS_P7" Language="de_DE">
+       <Text>Allgemein</Text>
+    </Replace>
+
+    
+    <!-- Archaeologist Lens -->
+    <Replace Tag="LOC_HUD_ARCHAEOLOGIST_LENS" Language="de_DE">
+      <Text>Archäologe</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_ARCHAEOLOGIST_LENS_TOOLTIP" Language="de_DE">
+      <Text>Zeigt Ausgrabungsstätten auf der Karte.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_ARCHAEOLOGIST_LENS_ARTIFACT" Language="de_DE">
+      <Text>Artefakt</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_ARCHAEOLOGIST_LENS_SHIPWRECK" Language="de_DE">
+      <Text>Schiffswrack</Text>
+    </Replace>
+
+    <!-- City Overlap Lens -->
+    <Replace Tag="LOC_HUD_CITYOVERLAP_LENS" Language="de_DE">
+      <Text>Überlappung</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_CITYOVERLAP_LENS_TOOLTIP" Language="de_DE">
+      <Text>Zeigt, wie viele Städte überlappen (Abstand: 6 Felder)</Text>
+    </Replace>
+    <Replace Tag="LOC_PANEL_CITYOVERLAP_OPTION1" Language="de_DE">
+      <Text>Werte außerhalb der Landesgrenze</Text>
+    </Replace>
+    <Replace Tag="LOC_PANEL_CITYOVERLAP_NMOUSE" Language="de_DE">
+        <Text>Keine Maus</Text>
+    </Replace>
+    <Replace Tag="LOC_PANEL_CITYOVERLAP_RANGE" Language="de_DE">
+      <Text>Überlapp-Maus</Text>
+    </Replace>
+    <Replace Tag="LOC_TOOLTIP_CITYOVERLAP_RANGE" Language="de_DE">
+      <Text>Zeigt Felder und Städte innerhalb des (unten gesetzten) Abstands vom Feld unter der Maus.</Text>
+    </Replace>
+    <Replace Tag="LOC_PANEL_CITYOVERLAP_RADIUS" Language="de_DE">
+      <Text>Radius-Maus</Text>
+    </Replace>
+
+    <!-- Barbarian Lens -->
+    <Replace Tag="LOC_HUD_BARBARIAN_LENS" Language="de_DE">
+      <Text>Barbaren</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_BARBARIAN_LENS_TOOLTIP" Language="de_DE">
+      <Text>Zeigt Barbaren-Lager auf der Karte.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_BARBARIAN_LENS_ENCAMPMENT" Language="de_DE">
+      <Text>Barbaren-Lager</Text>
+    </Replace>
+
+    <!-- Resources Lens -->
+    <Replace Tag="LOC_HUD_RESOURCE_LENS" Language="de_DE">
+      <Text>Ressourcen</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RESOURCE_LENS_TOOLTIP" Language="de_DE">
+      <Text>Zeigt Ressourcenfelder.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RESOURCE_LENS_LUXCONNECTED" Language="de_DE">
+      <Text>Luxusressource</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RESOURCE_LENS_LUXNCONNECTED" Language="de_DE">
+      <Text>Unerschlossene Luxusressource</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RESOURCE_LENS_STRATCONNECTED" Language="de_DE">
+      <Text>Strateg. Ressource</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RESOURCE_LENS_STRATNCONNECTED" Language="de_DE">
+      <Text>Unerschlossene strateg. Ressource</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RESOURCE_LENS_BONUSCONNECTED" Language="de_DE">
+      <Text>Bonusressource</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_RESOURCE_LENS_BONUSNCONNECTED" Language="de_DE">
+      <Text>Unerschlossene Bonusressource</Text>
+    </Replace>
+
+    <!-- Wonder Lens -->
+    <Replace Tag="LOC_HUD_WONDER_LENS" Language="de_DE">
+      <Text>Wunder</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_WONDER_LENS_TOOLTIP" Language="de_DE">
+      <Text>Zeigt Naturwunder und errichtete Wunder auf der Karte.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_WONDER_LENS_NATURAL" Language="de_DE">
+      <Text>Naturwunder</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_WONDER_LENS_PLAYER" Language="de_DE">
+      <Text>Errichtete Wunder</Text>
+    </Replace>
+
+    <!-- Adjacency Yield Lens -->
+    <Replace Tag="LOC_HUD_ADJYIELD_LENS" Language="de_DE">
+      <Text>Nachbarschafts-Erträge</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_ADJYIELD_LENS_TOOLTIP" Language="de_DE">
+      <Text>Zeigt die Nachbarschafts-Erträge von Bezirken.</Text>
+    </Replace>
+
+    <!-- Scout Lens -->
+    <Replace Tag="LOC_HUD_SCOUT_LENS" Language="de_DE">
+      <Text>Späher</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_SCOUT_LENS_TOOLTIP" Language="de_DE">
+      <Text>Zeigt Stammesdörfer auf der Karte.</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_SCOUT_LENS_GHUT" Language="de_DE">
+      <Text>Stammesdorf</Text>
+    </Replace>
+
+    <!-- Naturalist Lens -->
+    <Replace Tag="LOC_HUD_NATURALIST_LENS" Language="de_DE">
+      <Text>Naturforscher</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_NATURALIST_LENS_TOOLTIP" Language="de_DE">
+      <Text>Zeigt geeignete Plätze zum Bau von Nationalparks</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_NATURALIST_LENS_PARK" Language="de_DE">
+      <Text>Gebiet bereit für einen Nationalpark</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_NATURALIST_LENS_OK" Language="de_DE">
+      <Text>Umliegende Felder müssen verbessert werden</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_NATURALIST_LENS_FIXABLE" Language="de_DE">
+      <Text>Feld kann verbessert werden</Text>
+    </Replace>
+
+    <Replace Tag="LOC_HUD_CITY_PLOT_LENS" Language="de_DE">
+      <Text>Stadtgrundstück</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_CITY_PLOT_LENS_TOOLTIP" Language="de_DE">
+      <Text>Zeigt Grundstücke auf denen gearbeitet wird und Grundstücke die noch gesperrt sind</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_CITY_PLOT_LENS_WORKING" Language="de_DE">
+      <Text>Arbeiter Grundstücke</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_CITY_PLOT_LENS_LOCKED" Language="de_DE">
+      <Text>Gesperrte Grundstücke</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_CITY_PLOT_LENS_CULTURE" Language="de_DE">
+      <Text>Nächstes Kultur-Grundstück</Text>
+    </Replace>
+    
+    <Replace Tag="LOC_HUD_ROUTES_LENS" Language="de_DE">
+      <Text>Routen</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_ROUTES_LENS_RAIL" Language="de_DE">
+      <Text>Eisenbahnen</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_ROUTES_LENS_ROAD" Language="de_DE">
+      <Text>Straßen</Text>
+    </Replace>
+    <Replace Tag="LOC_HUD_ROUTES_LENS_TOOLTIP" Language="de_DE">
+      <Text>Hervorheben der Straßen und Eisenbahnen</Text>
+    </Replace>
+    
+    <!-- Settings Panel strings are in the cqui_text_settings.xml file -->
+  </LocalizedText>
+</GameData>

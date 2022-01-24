@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by matthew beach (Firaxis Games) -->
+<GameInfo>
+	<GoodyHutSubTypes>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_LARGE_GOLD"/>
+			<Set Weight="15"/>
+		</Update>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_MEDIUM_GOLD"/>
+			<Set Weight="25"/>
+		</Update>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_SMALL_GOLD"/>
+			<Set Weight="35"/>
+		</Update>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_GRANT_SCOUT"/>
+			<Set Weight="45"/>
+		</Update>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_ONE_TECH"/>
+			<Set Weight="15"/>
+		</Update>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_TWO_TECH_BOOSTS"/>
+			<Set Weight="25"/>
+		</Update>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_ONE_TECH_BOOST"/>
+			<Set Weight="60"/>
+		</Update>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_GRANT_SETTLER"/>
+			<Set Weight="15"/>
+		</Update>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_GRANT_TRADER"/>
+			<Set Weight="25"/>
+		</Update>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_GRANT_BUILDER"/>
+			<Set Weight="35"/>
+		</Update>
+		<Update>
+			<Where SubTypeGoodyHut="GOODYHUT_ADD_POP"/>
+			<Set Weight="35"/>
+		</Update>
+	</GoodyHutSubTypes>
+</GameInfo>

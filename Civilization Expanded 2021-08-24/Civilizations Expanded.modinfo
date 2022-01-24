@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="644fa20f-0686-4195-b71a-68ff3392daa7" version="1">
+  <Properties>
+    <Name>Civilizations Expanded</Name>
+    <Description>Overhauls all civilization and leader abilities.</Description>
+    <CustomProperties xmlns="http://schemas.microsoft.com/developer/msbuild/2003"></CustomProperties>
+    <Created>1629767716</Created>
+    <Teaser>Overhauls all civilization and leader abilities.</Teaser>
+    <Authors>p0kiehl; Leugi; Lime; Sukritact; DarthStarkiller</Authors>
+    <SpecialThanks>Amondin; Bunzato; ChimpanG; Chrisy15; Digihuman; DuskJockey; Enigma; Hunter; JanBoruta; JFD; Relic; SailorCat; SeelingCat; thecrazyscotsman; View619</SpecialThanks>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+  </Properties>
+  <Dependencies>
+    <Mod id="E3F53C61-371C-440B-96CE-077D318B36C0" title="DLC: Australia Civilization Pack" />
+    <Mod id="02A8BDDE-67EA-4D38-9540-26E685E3156E" title="DLC: Aztec Civilization Pack" />
+    <Mod id="1F367231-A040-4793-BDBB-088816853683" title="DLC: Khmer and Indonesia Civilization Pack" />
+    <Mod id="643EA320-8E1A-4CF1-A01C-00D88DDD131A" title="DLC: Nubia Civilization Pack" />
+    <Mod id="E2749E9A-8056-45CD-901B-C368C8E83DEB" title="DLC: Persia and Macedon Civilization Pack" />
+    <Mod id="3809975F-263F-40A2-A747-8BFB171D821A" title="DLC: Poland Civilization Pack" />
+    <Mod id="4873eb62-8ccc-4574-b784-dda455e74e68" title="Expansion: Gathering Storm" />
+    <Mod id="1B28771A-C749-434B-9053-D1380C553DE9" title="Expansion: Rise and Fall" />
+  </Dependencies>
+  <ActionCriteria>
+    <Criteria id="XP1">
+      <GameCoreInUse>Expansion1</GameCoreInUse>
+    </Criteria>
+    <Criteria id="XP2">
+      <GameCoreInUse>Expansion2</GameCoreInUse>
+    </Criteria>
+    <Criteria id="XP1 or XP2" any="1">
+      <GameCoreInUse>Expansion1,Expansion2</GameCoreInUse>
+    </Criteria>
+    <Criteria id="DLC1" any="1">
+      <LeaderPlayable>Players:StandardPlayers::LEADER_JADWIGA,StandardPlayers::LEADER_JADWIGA,Players:Expansion1_Players::LEADER_JADWIGA,Players:Expansion2_Players::LEADER_JADWIGA</LeaderPlayable>
+    </Criteria>
+    <Criteria id="DLC3" any="1">
+      <LeaderPlayable>Players:StandardPlayers::LEADER_JOHN_CURTIN,StandardPlayers::LEADER_JOHN_CURTIN,Players:Expansion1_Players::LEADER_JOHN_CURTIN,Players:Expansion2_Players::LEADER_JOHN_CURTIN</LeaderPlayable>
+    </Criteria>
+    <Criteria id="DLC4" any="1">
+      <LeaderPlayable>Players:StandardPlayers::LEADER_ALEXANDER,Players:StandardPlayers::LEADER_CYRUS,StandardPlayers::LEADER_ALEXANDER,StandardPlayers::LEADER_CYRUS,Players:Expansion1_Players::LEADER_ALEXANDER,Players:Expansion2_Players::LEADER_CYRUS,Players:Expansion2_Players::LEADER_ALEXANDER,Players:Expansion2_Players::LEADER_CYRUS</LeaderPlayable>
+    </Criteria>
+    <Criteria id="DLC5" any="1">
+      <LeaderPlayable>Players:StandardPlayers::LEADER_AMANITORE,StandardPlayers::LEADER_AMANITORE,Players:Expansion1_Players::LEADER_AMANITORE,Players:Expansion2_Players::LEADER_AMANITORE</LeaderPlayable>
+    </Criteria>
+    <Criteria id="DLC6" any="1">
+      <LeaderPlayable>Players:StandardPlayers::LEADER_GITARJA,Players:StandardPlayers::LEADER_JAYAVARMAN,StandardPlayers::LEADER_GITARJA,StandardPlayers::LEADER_JAYAVARMAN,Players:Expansion1_Players::LEADER_GITARJA,Players:Expansion2_Players::LEADER_JAYAVARMAN,Players:Expansion2_Players::LEADER_GITARJA,Players:Expansion2_Players::LEADER_JAYAVARMAN</LeaderPlayable>
+    </Criteria>
+    <Criteria id="GranColombia_Maya" any="1">
+      <LeaderPlayable>Players:StandardPlayers::LEADER_SIMON_BOLIVAR,Players:StandardPlayers::LEADER_LADY_SIX_SKY,StandardPlayers::LEADER_SIMON_BOLIVAR,StandardPlayers::LEADER_LADY_SIX_SKY,Players:Expansion1_Players::LEADER_SIMON_BOLIVAR,Players:Expansion2_Players::LEADER_LADY_SIX_SKY,Players:Expansion2_Players::LEADER_SIMON_BOLIVAR,Players:Expansion2_Players::LEADER_LADY_SIX_SKY</LeaderPlayable>
+    </Criteria>
+    <Criteria id="Ethiopia">
+      <ModInUse>1B394FE9-23DC-4868-8F0A-5220CB8FB427</ModInUse>
+    </Criteria>
+    <Criteria id="No_Ethiopia">
+      <ModInUse inverse="1">1B394FE9-23DC-4868-8F0A-5220CB8FB427</ModInUse>
+    </Criteria>
+    <Criteria id="CatherinePersona">
+      <ModInUse>CE5876CD-6900-46D1-9C9C-8DBA1F28872E</ModInUse>
+    </Criteria>
+    <Criteria id="No_CatherinePersona">
+      <ModInUse inverse="1">CE5876CD-6900-46D1-9C9C-8DBA1F28872E</ModInUse>
+    </Criteria>
+    <Criteria id="TeddyPersona">
+      <ModInUse>113D9459-0A3B-4FCB-A49C-483F40303575</ModInUse>
+    </Criteria>
+    <Criteria id="No_TeddyPersona">
+      <ModInUse inverse="1">113D9459-0A3B-4FCB-A49C-483F40303575</ModInUse>
+    </Criteria>
+    <Criteria id="Religion_Expanded">
+      <ModInUse>c6775ded-6693-474a-ade5-b4c51d932bd8</ModInUse>
+    </Criteria>
+    <Criteria id="Byzantium_Gaul">
+      <ModInUse>A1100FC4-70F2-4129-AC27-2A65A685ED08</ModInUse>
+    </Criteria>
+    <Criteria id="Babylon">
+      <ModInUse>8424840C-92EF-4426-A9B4-B4E0CB818049</ModInUse>
+    </Criteria>
+    <Criteria id="No_Babylon">
+      <ModInUse inverse="1">8424840C-92EF-4426-A9B4-B4E0CB818049</ModInUse>
+    </Criteria>
+    <Criteria id="Heroes_Mode">
+      <ConfigurationValueMatches>
+        <Group>Game</Group>
+        <ConfigurationId>GAMEMODE_HEROES</ConfigurationId>
+        <Value>1</Value>
+      </ConfigurationValueMatches>
+    </Criteria>
+    <Criteria id="Heroes_Mode_Inactive">
+      <ConfigurationValueMatches>
+        <Group>Game</Group>
+        <ConfigurationId>GAMEMODE_HEROES</ConfigurationId>
+        <Value>0</Value>
+      </ConfigurationValueMatches>
+    </Criteria>
+    <Criteria id="KublaiKhan_Vietnam">
+      <ModInUse>A3F42CD4-6C3E-4F5A-BC81-BE29E0C0B87C</ModInUse>
+    </Criteria>
+    <Criteria id="Portugal">
+      <ModInUse>FFDF4E79-DEE2-47BB-919B-F5739106627A</ModInUse>
+    </Criteria>
+  </ActionCriteria>
+  <FrontEndActions>
+    <UpdateText id="Text">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <File>Core/Base/Localisation/CX_Base_Localisation.sql</File>
+      <File>Core/DLC/Localisation/CX_DLC_Localisation.sql</File>
+      <File>Core/XP1/Localisation/CX_XP1_Localisation.sql</File>
+      <File>Core/XP2/Localisation/CX_XP2_Localisation.sql</File>
+      <File>Core/NFP/Localisation/CX_NFP_Localisation.sql</File>
+    </UpdateText>
+    <UpdateArt id="Art">
+      <Properties>
+        <LoadOrder>5</LoadOrder>
+      </Properties>
+      <File>Civilizations Expanded.dep</File>
+    </UpdateArt>
+    <UpdateIcons id="Icons">
+      <Properties>
+        <LoadOrder>5</LoadOrder>
+      </Properties>
+      <File>UI/Icons/CX_Icons.sql</File>
+      <File>Core/DLC/Khmer/CX_Khmer_IconDefinitions.sql</File>
+    </UpdateIcons>
+    <UpdateDatabase id="Config">
+      <Properties>
+        <LoadOrder>5</LoadOrder>
+      </Properties>
+      <File>Core/Base/Base_Config/CX_Base_Config.sql</File>
+      <File>Core/DLC/Khmer/CX_Khmer_Config.sql</File>
+      <File>Core/XP1/XP1_Config/XP1_Config.sql</File>
+      <File>Core/XP2/XP2_Config/XP2_Config.sql</File>
+      <File>Core/Base/CatherineDeMedici/CX_Catherine_Persona_Config.sql</File>
+      <File>Core/NFP/NFP_Config/NFP_Config.sql</File>
+    </UpdateDatabase>
+  </FrontEndActions>
+  <InGameActions>
+    <UpdateArt id="Art">
+      <Properties>
+        <LoadOrder>50</LoadOrder>
+      </Properties>
+      <File>Civilizations Expanded.dep</File>
+    </UpdateArt>
+    <UpdateIcons id="Icons">
+      <Properties>
+        <LoadOrder>50</LoadOrder>
+      </Properties>
+      <File>UI/Icons/CX_Icons.sql</File>
+      <File>Core/DLC/Khmer/CX_Khmer_IconDefinitions.sql</File>
+      <File>UI/Icons/CX_InGame_Icons.sql</File>
+    </UpdateIcons>
+    <UpdateDatabase id="Global">
+      <Properties>
+        <LoadOrder>100</LoadOrder>
+      </Properties>
+      <File>Core/Global/CX_Global_Defines.sql</File>
+      <File>Core/Global/CX_Global_Policies.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Base">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <File>Core/Base/CX_America.sql</File>
+      <File>Core/Base/CX_Arabia.sql</File>
+      <File>Core/Base/CX_Brazil.sql</File>
+      <File>Core/Base/CX_China.sql</File>
+      <File>Core/Base/CX_Egypt.sql</File>
+      <File>Core/Base/CX_England.sql</File>
+      <File>Core/Base/CX_France.sql</File>
+      <File>Core/Base/CX_Germany.sql</File>
+      <File>Core/Base/CX_Greece.sql</File>
+      <File>Core/Base/CX_India.sql</File>
+      <File>Core/Base/CX_Japan.sql</File>
+      <File>Core/Base/CX_Kongo.sql</File>
+      <File>Core/Base/CX_Norway.sql</File>
+      <File>Core/Base/CX_Rome.sql</File>
+      <File>Core/Base/CX_Russia.sql</File>
+      <File>Core/Base/CX_Scythia.sql</File>
+      <File>Core/Base/CX_Spain.sql</File>
+      <File>Core/Base/CX_Sumer.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="DLC">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <File>Core/DLC/CX_Australia.sql</File>
+      <File>Core/DLC/CX_Aztec.sql</File>
+      <File>Core/DLC/CX_Indonesia.sql</File>
+      <File>Core/DLC/CX_Macedon.sql</File>
+      <File>Core/DLC/CX_Nubia.sql</File>
+      <File>Core/DLC/CX_Persia.sql</File>
+      <File>Core/DLC/CX_Poland.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="DLC_Khmer">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <File>Core/DLC/Khmer/CX_Khmer_Civilizations.sql</File>
+      <File>Core/DLC/Khmer/CX_Khmer_Districts.sql</File>
+      <File>Core/DLC/Khmer/CX_Khmer_Leaders.sql</File>
+      <File>Core/DLC/Khmer/CX_Khmer_Units.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="XP1">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <File>Core/XP1/CX_Chandragupta.sql</File>
+      <File>Core/XP1/CX_Cree.sql</File>
+      <File>Core/XP1/CX_Georgia.sql</File>
+      <File>Core/XP1/CX_Korea.sql</File>
+      <File>Core/XP1/CX_Mapuche.sql</File>
+      <File>Core/XP1/CX_Mongolia.sql</File>
+      <File>Core/XP1/CX_Netherlands.sql</File>
+      <File>Core/XP1/CX_Scotland.sql</File>
+      <File>Core/XP1/CX_Zulu.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="XP2">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <File>Core/XP2/CX_Canada.sql</File>
+      <File>Core/XP2/CX_Eleanor.sql</File>
+      <File>Core/XP2/CX_Hungary.sql</File>
+      <File>Core/XP2/CX_Inca.sql</File>
+      <File>Core/XP2/CX_Mali.sql</File>
+      <File>Core/XP2/CX_Maori.sql</File>
+      <File>Core/XP2/CX_Ottoman.sql</File>
+      <File>Core/XP2/CX_Phoenicia.sql</File>
+      <File>Core/XP2/CX_Sweden.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Matthias_Ethiopia">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>Ethiopia</Criteria>
+      <File>Core/XP2/MatthiasCorvinus/CX_Matthias_Ethiopia.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Matthias_Ethiopia_ReligionExpanded">
+      <Properties>
+        <LoadOrder>260</LoadOrder>
+      </Properties>
+      <Criteria>Ethiopia</Criteria>
+      <Criteria>Religion_Expanded</Criteria>
+      <File>Core/XP2/MatthiasCorvinus/CX_Matthias_Ethiopia_ReligionExpanded.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Matthias_No_Ethiopia">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>No_Ethiopia</Criteria>
+      <File>Core/XP2/MatthiasCorvinus/CX_Matthias_No_Ethiopia.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="NFP_GranColombia_Maya">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>GranColombia_Maya</Criteria>
+      <File>Core/NFP/CX_NFP_Gran_Colombia.sql</File>
+      <File>Core/NFP/CX_NFP_Maya.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="NFP_Ethiopia">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>Ethiopia</Criteria>
+      <File>Core/NFP/CX_NFP_Ethiopia.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="NFP_Byzantium_Gaul">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>Byzantium_Gaul</Criteria>
+      <File>Core/NFP/CX_NFP_Byzantium.sql</File>
+      <File>Core/NFP/CX_NFP_Gaul.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="NFP_Babylon">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>Babylon</Criteria>
+      <File>Core/NFP/CX_NFP_Babylon.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Catherine_Persona">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>CatherinePersona</Criteria>
+      <Criteria>Ethiopia</Criteria>
+      <File>Core/Base/CatherineDeMedici/CX_Catherine_Persona.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Catherine_Default">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>No_CatherinePersona</Criteria>
+      <Criteria>No_Ethiopia</Criteria>
+      <File>Core/Base/CatherineDeMedici/CX_Catherine_No_Persona.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Teddy_Persona">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>TeddyPersona</Criteria>
+      <File>Core/Base/TeddyRoosevelt/CX_Teddy_Persona.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Teddy_Default">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>No_TeddyPersona</Criteria>
+      <File>Core/Base/TeddyRoosevelt/CX_Teddy_No_Persona.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Gilgamesh_No_Babylon">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>No_Babylon</Criteria>
+      <File>Core/Base/Gilgamesh/CX_Gilgamesh_No_Babylon.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Gilgamesh_Heroes">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>Heroes_Mode</Criteria>
+      <File>Core/Base/Gilgamesh/CX_Gilgamesh_Heroes.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Gilgamesh_No_Heroes">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>Heroes_Mode_Inactive</Criteria>
+      <File>Core/Base/Gilgamesh/CX_Gilgamesh_No_Heroes.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="NFP_KublaiKhan_Vietnam">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>KublaiKhan_Vietnam</Criteria>
+      <File>Core/NFP/CX_NFP_Kublai.sql</File>
+      <File>Core/NFP/CX_NFP_Vietnam.sql</File>
+    </UpdateDatabase>
+    <UpdateText id="Text">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <File>Core/Global/CX_Global_Localisation.sql</File>
+      <File>Core/Base/Localisation/CX_Base_Localisation.sql</File>
+      <File>Core/DLC/Localisation/CX_DLC_Localisation.sql</File>
+      <File>Core/XP1/Localisation/CX_XP1_Localisation.sql</File>
+      <File>Core/XP2/Localisation/CX_XP2_Localisation.sql</File>
+      <File>Core/NFP/Localisation/CX_NFP_Localisation.sql</File>
+    </UpdateText>
+    <UpdateDatabase id="NFP_Portugal">
+      <Properties>
+        <LoadOrder>250</LoadOrder>
+      </Properties>
+      <Criteria>Portugal</Criteria>
+      <File>Core/NFP/CX_NFP_Portugal.sql</File>
+    </UpdateDatabase>
+  </InGameActions>
+  <Files>
+    <File>ArtDefs/Districts.artdef</File>
+    <File>ArtDefs/Improvements.artdef</File>
+    <File>ArtDefs/Landmarks.artdef</File>
+    <File>ArtDefs/UserInterface.artdef</File>
+    <File>Assets/DIS_SUK_BARAY_CentralPrasat.ast</File>
+    <File>Assets/DIS_SUK_BARAY_Classical_Base.ast</File>
+    <File>Assets/DIS_SUK_BARAY_Gallery.ast</File>
+    <File>Assets/DIS_SUK_BARAY_Industrial_Base.ast</File>
+    <File>Assets/DIS_SUK_BARAY_Lion_A.ast</File>
+    <File>Assets/DIS_SUK_BARAY_Lion_B.ast</File>
+    <File>Assets/DIS_SUK_BARAY_Modern_Base.ast</File>
+    <File>Assets/DIS_SUK_BARAY_Pool.ast</File>
+    <File>Assets/IMP_p0k_Stave_Church.ast</File>
+    <File>Civilizations Expanded.Art.xml</File>
+    <File>Civilizations Expanded.dep</File>
+    <File>Core/Base/Base_Config/CX_Base_Config.sql</File>
+    <File>Core/Base/CatherineDeMedici/CX_Catherine_No_Persona.sql</File>
+    <File>Core/Base/CatherineDeMedici/CX_Catherine_Persona.sql</File>
+    <File>Core/Base/CatherineDeMedici/CX_Catherine_Persona_Config.sql</File>
+    <File>Core/Base/CX_America.sql</File>
+    <File>Core/Base/CX_Arabia.sql</File>
+    <File>Core/Base/CX_Brazil.sql</File>
+    <File>Core/Base/CX_China.sql</File>
+    <File>Core/Base/CX_Egypt.sql</File>
+    <File>Core/Base/CX_England.sql</File>
+    <File>Core/Base/CX_France.sql</File>
+    <File>Core/Base/CX_Germany.sql</File>
+    <File>Core/Base/CX_Greece.sql</File>
+    <File>Core/Base/CX_India.sql</File>
+    <File>Core/Base/CX_Japan.sql</File>
+    <File>Core/Base/CX_Kongo.sql</File>
+    <File>Core/Base/CX_Norway.sql</File>
+    <File>Core/Base/CX_Rome.sql</File>
+    <File>Core/Base/CX_Russia.sql</File>
+    <File>Core/Base/CX_Scythia.sql</File>
+    <File>Core/Base/CX_Spain.sql</File>
+    <File>Core/Base/CX_Sumer.sql</File>
+    <File>Core/Base/Gilgamesh/CX_Gilgamesh_Heroes.sql</File>
+    <File>Core/Base/Gilgamesh/CX_Gilgamesh_No_Babylon.sql</File>
+    <File>Core/Base/Gilgamesh/CX_Gilgamesh_No_Heroes.sql</File>
+    <File>Core/Base/Localisation/CX_Base_Localisation.sql</File>
+    <File>Core/Base/TeddyRoosevelt/CX_Teddy_No_Persona.sql</File>
+    <File>Core/Base/TeddyRoosevelt/CX_Teddy_Persona.sql</File>
+    <File>Core/DLC/CX_Australia.sql</File>
+    <File>Core/DLC/CX_Aztec.sql</File>
+    <File>Core/DLC/CX_Indonesia.sql</File>
+    <File>Core/DLC/CX_Macedon.sql</File>
+    <File>Core/DLC/CX_Nubia.sql</File>
+    <File>Core/DLC/CX_Persia.sql</File>
+    <File>Core/DLC/CX_Poland.sql</File>
+    <File>Core/DLC/Khmer/CX_Khmer_Civilizations.sql</File>
+    <File>Core/DLC/Khmer/CX_Khmer_Config.sql</File>
+    <File>Core/DLC/Khmer/CX_Khmer_Districts.sql</File>
+    <File>Core/DLC/Khmer/CX_Khmer_IconDefinitions.sql</File>
+    <File>Core/DLC/Khmer/CX_Khmer_Leaders.sql</File>
+    <File>Core/DLC/Khmer/CX_Khmer_Units.sql</File>
+    <File>Core/DLC/Localisation/CX_DLC_Localisation.sql</File>
+    <File>Core/Global/CX_Global_Defines.sql</File>
+    <File>Core/Global/CX_Global_Localisation.sql</File>
+    <File>Core/Global/CX_Global_Policies.sql</File>
+    <File>Core/NFP/CX_NFP_Babylon.sql</File>
+    <File>Core/NFP/CX_NFP_Byzantium.sql</File>
+    <File>Core/NFP/CX_NFP_Ethiopia.sql</File>
+    <File>Core/NFP/CX_NFP_Gaul.sql</File>
+    <File>Core/NFP/CX_NFP_Gran_Colombia.sql</File>
+    <File>Core/NFP/CX_NFP_Kublai.sql</File>
+    <File>Core/NFP/CX_NFP_Maya.sql</File>
+    <File>Core/NFP/CX_NFP_Portugal.sql</File>
+    <File>Core/NFP/CX_NFP_Vietnam.sql</File>
+    <File>Core/NFP/Localisation/CX_NFP_Localisation.sql</File>
+    <File>Core/NFP/NFP_Config/NFP_Config.sql</File>
+    <File>Core/XP1/CX_Chandragupta.sql</File>
+    <File>Core/XP1/CX_Cree.sql</File>
+    <File>Core/XP1/CX_Georgia.sql</File>
+    <File>Core/XP1/CX_Korea.sql</File>
+    <File>Core/XP1/CX_Mapuche.sql</File>
+    <File>Core/XP1/CX_Mongolia.sql</File>
+    <File>Core/XP1/CX_Netherlands.sql</File>
+    <File>Core/XP1/CX_Scotland.sql</File>
+    <File>Core/XP1/CX_Zulu.sql</File>
+    <File>Core/XP1/Localisation/CX_XP1_Localisation.sql</File>
+    <File>Core/XP1/XP1_Config/XP1_Config.sql</File>
+    <File>Core/XP2/CX_Canada.sql</File>
+    <File>Core/XP2/CX_Eleanor.sql</File>
+    <File>Core/XP2/CX_Hungary.sql</File>
+    <File>Core/XP2/CX_Inca.sql</File>
+    <File>Core/XP2/CX_Mali.sql</File>
+    <File>Core/XP2/CX_Maori.sql</File>
+    <File>Core/XP2/CX_Ottoman.sql</File>
+    <File>Core/XP2/CX_Phoenicia.sql</File>
+    <File>Core/XP2/CX_Sweden.sql</File>
+    <File>Core/XP2/Localisation/CX_XP2_Localisation.sql</File>
+    <File>Core/XP2/MatthiasCorvinus/CX_Matthias_Ethiopia.sql</File>
+    <File>Core/XP2/MatthiasCorvinus/CX_Matthias_Ethiopia_ReligionExpanded.sql</File>
+    <File>Core/XP2/MatthiasCorvinus/CX_Matthias_No_Ethiopia.sql</File>
+    <File>Core/XP2/XP2_Config/XP2_Config.sql</File>
+    <File>Geometries/DIS_SUK_BARAY_CentralPrasat.fgx</File>
+    <File>Geometries/DIS_SUK_BARAY_CentralPrasat.geo</File>
+    <File>Geometries/DIS_SUK_BARAY_CentralPrasat_PIL.fgx</File>
+    <File>Geometries/DIS_SUK_BARAY_CentralPrasat_PIL.geo</File>
+    <File>Geometries/DIS_SUK_BARAY_Gallery.fgx</File>
+    <File>Geometries/DIS_SUK_BARAY_Gallery.geo</File>
+    <File>Geometries/DIS_SUK_BARAY_Gallery_Decal.fgx</File>
+    <File>Geometries/DIS_SUK_BARAY_Gallery_Decal.geo</File>
+    <File>Geometries/DIS_SUK_BARAY_Gallery_PIL.fgx</File>
+    <File>Geometries/DIS_SUK_BARAY_Gallery_PIL.geo</File>
+    <File>Geometries/DIS_SUK_BARAY_Lion.fgx</File>
+    <File>Geometries/DIS_SUK_BARAY_Lion.geo</File>
+    <File>Geometries/DIS_SUK_BARAY_LionFeet_PIL.fgx</File>
+    <File>Geometries/DIS_SUK_BARAY_LionFeet_PIL.geo</File>
+    <File>Geometries/DIS_SUK_BARAY_LionHead_PIL.fgx</File>
+    <File>Geometries/DIS_SUK_BARAY_LionHead_PIL.geo</File>
+    <File>Geometries/DIS_SUK_BARAY_Lion_CONS.fgx</File>
+    <File>Geometries/DIS_SUK_BARAY_Lion_CONS.geo</File>
+    <File>Geometries/DIS_SUK_BARAY_Pool.fgx</File>
+    <File>Geometries/DIS_SUK_BARAY_Pool.geo</File>
+    <File>Geometries/DIS_SUK_BARAY_Pool_Decal.fgx</File>
+    <File>Geometries/DIS_SUK_BARAY_Pool_Decal.geo</File>
+    <File>Geometries/DIS_SUK_BARAY_TerrainDecal.fgx</File>
+    <File>Geometries/DIS_SUK_BARAY_TerrainDecal.geo</File>
+    <File>Geometries/DIS_SUK_BARAY_TileBase.fgx</File>
+    <File>Geometries/DIS_SUK_BARAY_TileBase.geo</File>
+    <File>Geometries/DIS_SUK_BARAY_TileBase_Decal.fgx</File>
+    <File>Geometries/DIS_SUK_BARAY_TileBase_Decal.geo</File>
+    <File>Materials/DIS_p0k_Zaibatsu_Base.mtl</File>
+    <File>Materials/DIS_p0k_Zaibatsu_Base_Non_Emissive.mtl</File>
+    <File>Materials/Water/Suk_Baray_Water.mtl</File>
+    <File>Platforms/MacOS/BLPs/landmarks/tilebases.blp</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/BLOB_DIS_Suk_Baray_TerrainDecalMask</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Burn_BaseColor</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Burn_G</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Ancient_01_B</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Ancient_01_FOW</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Ancient_01_H</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Ancient_PIL_B</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Ancient_PIL_H</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Classical_01_B</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Classical_01_H</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Classical_PIL_B</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Classical_PIL_H</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Industrial_01_B</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Industrial_01_FOW</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Industrial_01_H</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Industrial_PIL_B</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Industrial_PIL_H</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Modern_01_B</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Modern_01_FOW</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Modern_01_H</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Modern_PIL_B</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Modern_PIL_H</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Ancient_01_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Ancient_PIL_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Classical_01_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Classical_PIL_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Industrial_01_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Industrial_PIL_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Modern_01_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Modern_PIL_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_DIS_CTY_AW_Grounds_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_DIS_CTY_RIND_Base_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_DIS_REL_Temple_Khmer_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_DIS_Suk_Baray_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Error_Red_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Foliage_Bld_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Foliage_Bld_Flowered_Color_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Foundation_Brick_Gray_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Pillage_Construction_01_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Tree_Jungle_B_null</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_AW_Grounds_G</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_AW_Grounds_N0</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_AW_Grounds_N1</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_RE_BaseA_A</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_RIND_Base_E</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_RIND_Base_G</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_RIND_Base_M</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_RIND_Base_N0</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_RIND_Base_N1</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_REL_Temple_Khmer_E</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_REL_Temple_Khmer_G</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_REL_Temple_Khmer_M</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_REL_Temple_Khmer_N0</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_REL_Temple_Khmer_N1</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_Suk_Baray_A</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_Suk_Baray_E</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_Suk_Baray_G</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_Suk_Baray_Lions_ao</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_Suk_Baray_N0</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_DIS_Suk_Baray_N1</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Foliage_Bld_Flowered_N0</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Foliage_Bld_Flowered_N1</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Foliage_Bld_G</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Foliage_Bld_N0</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Foliage_Bld_N1</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Foundation_Brick_Gray_G</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Foundation_Brick_Gray_N0</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Foundation_Brick_Gray_N1</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Pillage_Construction_01_G</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Pillage_Construction_01_N0</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Pillage_Construction_01_N1</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Pillage_Construction_01_O</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_ProceduralNoiseTexture2D_0x304656c5</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_TER_WaterTropical_Density_DarkMap_0x4c351125</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_TER_WaterTropical_Density_ScatterMap_0x4c351125</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_TER_Water_Bumps_Small_Lean0_0x9be17165</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_TER_Water_Bumps_Small_Lean1_0x9be17165</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Tree_Jungle_G</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Tree_Jungle_N0</File>
+    <File>Platforms/MacOS/BLPs/SHARED_DATA/TEXTURE_Tree_Jungle_N1</File>
+    <File>Platforms/MacOS/BLPs/UI/Icons.blp</File>
+    <File>Platforms/Windows/BLPs/landmarks/tilebases.blp</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/BLOB_DIS_Suk_Baray_TerrainDecalMask</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Burn_BaseColor</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Burn_G</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Ancient_01_B</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Ancient_01_FOW</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Ancient_01_H</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Ancient_PIL_B</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Ancient_PIL_H</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Classical_01_B</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Classical_01_H</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Classical_PIL_B</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Classical_PIL_H</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Industrial_01_B</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Industrial_01_FOW</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Industrial_01_H</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Industrial_PIL_B</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Industrial_PIL_H</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Modern_01_B</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Modern_01_FOW</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Modern_01_H</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Modern_PIL_B</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Decals_Parts_Modern_PIL_H</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Ancient_01_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Ancient_PIL_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Classical_01_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Classical_PIL_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Industrial_01_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Industrial_PIL_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Modern_01_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Decals_Parts_Modern_PIL_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_DIS_CTY_AW_Grounds_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_DIS_CTY_RIND_Base_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_DIS_REL_Temple_Khmer_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_DIS_Suk_Baray_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Error_Red_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Foliage_Bld_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Foliage_Bld_Flowered_Color_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Foundation_Brick_Gray_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Pillage_Construction_01_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Tree_Jungle_B_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_AW_Grounds_G</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_AW_Grounds_N0</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_AW_Grounds_N1</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_RE_BaseA_A</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_RIND_Base_E</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_RIND_Base_G</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_RIND_Base_M</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_RIND_Base_N0</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_CTY_RIND_Base_N1</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_REL_Temple_Khmer_E</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_REL_Temple_Khmer_G</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_REL_Temple_Khmer_M</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_REL_Temple_Khmer_N0</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_REL_Temple_Khmer_N1</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_Suk_Baray_A</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_Suk_Baray_E</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_Suk_Baray_G</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_Suk_Baray_Lions_ao</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_Suk_Baray_N0</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DIS_Suk_Baray_N1</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Foliage_Bld_Flowered_N0</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Foliage_Bld_Flowered_N1</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Foliage_Bld_G</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Foliage_Bld_N0</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Foliage_Bld_N1</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Foundation_Brick_Gray_G</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Foundation_Brick_Gray_N0</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Foundation_Brick_Gray_N1</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Pillage_Construction_01_G</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Pillage_Construction_01_N0</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Pillage_Construction_01_N1</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Pillage_Construction_01_O</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_ProceduralNoiseTexture2D_0x304656c5</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_TER_WaterTropical_Density_DarkMap_0x4c351125</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_TER_WaterTropical_Density_ScatterMap_0x4c351125</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_TER_Water_Bumps_Small_Lean0_0x9be17165</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_TER_Water_Bumps_Small_Lean1_0x9be17165</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Tree_Jungle_G</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Tree_Jungle_N0</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Tree_Jungle_N1</File>
+    <File>Platforms/Windows/BLPs/UI/Icons.blp</File>
+    <File>Textures/DIS_Suk_Baray_A.dds</File>
+    <File>Textures/DIS_Suk_Baray_A.tex</File>
+    <File>Textures/DIS_Suk_Baray_B.dds</File>
+    <File>Textures/DIS_Suk_Baray_B.tex</File>
+    <File>Textures/DIS_Suk_Baray_E.dds</File>
+    <File>Textures/DIS_Suk_Baray_E.tex</File>
+    <File>Textures/DIS_Suk_Baray_G.dds</File>
+    <File>Textures/DIS_Suk_Baray_G.tex</File>
+    <File>Textures/DIS_Suk_Baray_Lions_ao.dds</File>
+    <File>Textures/DIS_Suk_Baray_Lions_ao.tex</File>
+    <File>Textures/DIS_Suk_Baray_N.dds</File>
+    <File>Textures/DIS_Suk_Baray_N.tex</File>
+    <File>Textures/DIS_Suk_Baray_TerrainDecalMask.dds</File>
+    <File>Textures/DIS_Suk_Baray_TerrainDecalMask.tex</File>
+    <File>Textures/Leu_LibertadorFlag22.dds</File>
+    <File>Textures/Leu_LibertadorFlag22.tex</File>
+    <File>Textures/Leu_LibertadorFlag256.dds</File>
+    <File>Textures/Leu_LibertadorFlag256.tex</File>
+    <File>Textures/Leu_LibertadorFlag32.dds</File>
+    <File>Textures/Leu_LibertadorFlag32.tex</File>
+    <File>Textures/Leu_LibertadorFlag38.dds</File>
+    <File>Textures/Leu_LibertadorFlag38.tex</File>
+    <File>Textures/Leu_LibertadorFlag50.dds</File>
+    <File>Textures/Leu_LibertadorFlag50.tex</File>
+    <File>Textures/Leu_LibertadorFlag80.dds</File>
+    <File>Textures/Leu_LibertadorFlag80.tex</File>
+    <File>Textures/p0k_Icon_Clan_Castle_256.dds</File>
+    <File>Textures/p0k_Icon_Clan_Castle_256.tex</File>
+    <File>Textures/p0k_Icon_Clan_Castle_38.dds</File>
+    <File>Textures/p0k_Icon_Clan_Castle_38.tex</File>
+    <File>Textures/p0k_Icon_Clan_Castle_50.dds</File>
+    <File>Textures/p0k_Icon_Clan_Castle_50.tex</File>
+    <File>Textures/p0k_Icon_Clan_Castle_80.dds</File>
+    <File>Textures/p0k_Icon_Clan_Castle_80.tex</File>
+    <File>Textures/p0k_Icon_StaveChurch_256.dds</File>
+    <File>Textures/p0k_Icon_StaveChurch_256.tex</File>
+    <File>Textures/p0k_Icon_StaveChurch_38.dds</File>
+    <File>Textures/p0k_Icon_StaveChurch_38.tex</File>
+    <File>Textures/p0k_Icon_StaveChurch_50.dds</File>
+    <File>Textures/p0k_Icon_StaveChurch_50.tex</File>
+    <File>Textures/p0k_Icon_StaveChurch_80.dds</File>
+    <File>Textures/p0k_Icon_StaveChurch_80.tex</File>
+    <File>Textures/p0k_Moment_Infrastructure_Scotand.dds</File>
+    <File>Textures/p0k_Moment_Infrastructure_Scotand.tex</File>
+    <File>Textures/p0k_Project_VenusObservation_256.dds</File>
+    <File>Textures/p0k_Project_VenusObservation_256.tex</File>
+    <File>Textures/p0k_Project_VenusObservation_30.dds</File>
+    <File>Textures/p0k_Project_VenusObservation_30.tex</File>
+    <File>Textures/p0k_Project_VenusObservation_32.dds</File>
+    <File>Textures/p0k_Project_VenusObservation_32.tex</File>
+    <File>Textures/p0k_Project_VenusObservation_38.dds</File>
+    <File>Textures/p0k_Project_VenusObservation_38.tex</File>
+    <File>Textures/p0k_Project_VenusObservation_50.dds</File>
+    <File>Textures/p0k_Project_VenusObservation_50.tex</File>
+    <File>Textures/p0k_Project_VenusObservation_70.dds</File>
+    <File>Textures/p0k_Project_VenusObservation_70.tex</File>
+    <File>Textures/p0k_Project_VenusObservation_80.dds</File>
+    <File>Textures/p0k_Project_VenusObservation_80.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_128.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_128.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_200.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_200.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_22.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_22.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_256.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_256.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_30.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_30.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_32.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_32.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_36.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_36.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_38.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_38.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_44.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_44.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_45.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_45.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_48.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_48.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_50.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_50.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_55.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_55.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_64.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_64.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_70.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_70.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_80.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_80.tex</File>
+    <File>Textures/Suk_KhmerRework_Atlas_95.dds</File>
+    <File>Textures/Suk_KhmerRework_Atlas_95.tex</File>
+    <File>UI/Icons/CX_Icons.sql</File>
+    <File>UI/Icons/CX_InGame_Icons.sql</File>
+    <File>XLPs/Icons.xlp</File>
+    <File>XLPs/tilebases.xlp</File>
+  </Files>
+</Mod>

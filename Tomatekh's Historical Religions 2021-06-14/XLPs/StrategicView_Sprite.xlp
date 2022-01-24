@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AssetObjects..XLP>
+	<m_Version>
+		<major>1</major>
+		<minor>0</minor>
+		<build>0</build>
+		<revision>0</revision>
+	</m_Version>
+	<m_ClassName text="StrategicView_Sprite"/>
+	<m_PackageName text="StrategicView_Sprite"/>
+	<m_Entries>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Amatongo"/>
+			<m_ObjectName text="ReligionPressureIcon_Amatongo"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Midewiwin"/>
+			<m_ObjectName text="ReligionPressureIcon_Midewiwin"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Chaldaenism"/>
+			<m_ObjectName text="ReligionPressureIcon_Chaldaenism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Hellenism"/>
+			<m_ObjectName text="ReligionPressureIcon_Hellenism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Pesedjet"/>
+			<m_ObjectName text="ReligionPressureIcon_Pesedjet"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Sairimaism"/>
+			<m_ObjectName text="ReligionPressureIcon_Sairimaism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Tengriism"/>
+			<m_ObjectName text="ReligionPressureIcon_Tengriism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Tlateomatiliztli"/>
+			<m_ObjectName text="ReligionPressureIcon_Tlateomatiliztli"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Wakan_Tanka"/>
+			<m_ObjectName text="ReligionPressureIcon_Wakan_Tanka"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Witran_Mapu"/>
+			<m_ObjectName text="ReligionPressureIcon_Witran_Mapu"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Agakkunngurniq"/>
+			<m_ObjectName text="ReligionPressureIcon_Agakkunngurniq"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Aito"/>
+			<m_ObjectName text="ReligionPressureIcon_Aito"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Ankattu"/>
+			<m_ObjectName text="ReligionPressureIcon_Ankattu"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Bahai"/>
+			<m_ObjectName text="ReligionPressureIcon_Bahai"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9a_Buddhism"/>
+			<m_ObjectName text="ReligionPressureIcon_9a_Buddhism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9b_Catholicism"/>
+			<m_ObjectName text="ReligionPressureIcon_9b_Catholicism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9c_Confucianism"/>
+			<m_ObjectName text="ReligionPressureIcon_9c_Confucianism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9d_Hinduism"/>
+			<m_ObjectName text="ReligionPressureIcon_9d_Hinduism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9e_Islam"/>
+			<m_ObjectName text="ReligionPressureIcon_9e_Islam"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9f_Judaism"/>
+			<m_ObjectName text="ReligionPressureIcon_9f_Judaism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9g_Orthodox"/>
+			<m_ObjectName text="ReligionPressureIcon_9g_Orthodox"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9h_Protestantism"/>
+			<m_ObjectName text="ReligionPressureIcon_9h_Protestantism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9i_Shinto"/>
+			<m_ObjectName text="ReligionPressureIcon_9i_Shinto"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9j_Sikhism"/>
+			<m_ObjectName text="ReligionPressureIcon_9j_Sikhism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9k_Taoism"/>
+			<m_ObjectName text="ReligionPressureIcon_9k_Taoism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9l_Zoroastrianism"/>
+			<m_ObjectName text="ReligionPressureIcon_9l_Zoroastrianism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9m_Custom1"/>
+			<m_ObjectName text="ReligionPressureIcon_9m_Custom1"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9n_Custom2"/>
+			<m_ObjectName text="ReligionPressureIcon_9n_Custom2"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9o_Custom3"/>
+			<m_ObjectName text="ReligionPressureIcon_9o_Custom3"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9p_Custom4"/>
+			<m_ObjectName text="ReligionPressureIcon_9p_Custom4"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9q_Custom5"/>
+			<m_ObjectName text="ReligionPressureIcon_9q_Custom5"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9r_Custom6"/>
+			<m_ObjectName text="ReligionPressureIcon_9r_Custom6"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9s_Custom7"/>
+			<m_ObjectName text="ReligionPressureIcon_9s_Custom7"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9t_Custom8"/>
+			<m_ObjectName text="ReligionPressureIcon_9t_Custom8"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9u_Custom9"/>
+			<m_ObjectName text="ReligionPressureIcon_9u_Custom9"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9v_Custom10"/>
+			<m_ObjectName text="ReligionPressureIcon_9v_Custom10"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9w_Custom11"/>
+			<m_ObjectName text="ReligionPressureIcon_9w_Custom11"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_9x_Custom12"/>
+			<m_ObjectName text="ReligionPressureIcon_9x_Custom12"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_A1_Intiism"/>
+			<m_ObjectName text="ReligionPressureIcon_A1_Intiism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_A2_Chiminigagua"/>
+			<m_ObjectName text="ReligionPressureIcon_A2_Chiminigagua"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_B1_Mahayana"/>
+			<m_ObjectName text="ReligionPressureIcon_B1_Mahayana"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_B2_Vajrayana"/>
+			<m_ObjectName text="ReligionPressureIcon_B2_Vajrayana"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Bird_Figure"/>
+			<m_ObjectName text="ReligionPressureIcon_Bird_Figure"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Bmuntu"/>
+			<m_ObjectName text="ReligionPressureIcon_Bmuntu"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_C1_Oriental"/>
+			<m_ObjectName text="ReligionPressureIcon_C1_Oriental"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_C2_Nestorianism"/>
+			<m_ObjectName text="ReligionPressureIcon_C2_Nestorianism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_C3_Anglicanism"/>
+			<m_ObjectName text="ReligionPressureIcon_C3_Anglicanism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_C4_Restorationism"/>
+			<m_ObjectName text="ReligionPressureIcon_C4_Restorationism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_C5_Arianism"/>
+			<m_ObjectName text="ReligionPressureIcon_C5_Arianism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_C6_Catharism"/>
+			<m_ObjectName text="ReligionPressureIcon_C6_Catharism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Cnaanism"/>
+			<m_ObjectName text="ReligionPressureIcon_Cnaanism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Druidism"/>
+			<m_ObjectName text="ReligionPressureIcon_Druidism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_E1_Amanaiism"/>
+			<m_ObjectName text="ReligionPressureIcon_E1_Amanaiism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_E2_Atenism"/>
+			<m_ObjectName text="ReligionPressureIcon_E2_Atenism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Fat_Roog"/>
+			<m_ObjectName text="ReligionPressureIcon_Fat_Roog"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Forn_Sidr"/>
+			<m_ObjectName text="ReligionPressureIcon_Forn_Sidr"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_G1"/>
+			<m_ObjectName text="ReligionPressureIcon_G1"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_G2"/>
+			<m_ObjectName text="ReligionPressureIcon_G2"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_G3"/>
+			<m_ObjectName text="ReligionPressureIcon_G3"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_G4"/>
+			<m_ObjectName text="ReligionPressureIcon_G4"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_G5"/>
+			<m_ObjectName text="ReligionPressureIcon_G5"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_G6"/>
+			<m_ObjectName text="ReligionPressureIcon_G6"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_G7"/>
+			<m_ObjectName text="ReligionPressureIcon_G7"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_G8"/>
+			<m_ObjectName text="ReligionPressureIcon_G8"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_G9"/>
+			<m_ObjectName text="ReligionPressureIcon_G9"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_H1_Vedism"/>
+			<m_ObjectName text="ReligionPressureIcon_H1_Vedism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_H2_Vaishnavism"/>
+			<m_ObjectName text="ReligionPressureIcon_H2_Vaishnavism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_H3_Shaivism"/>
+			<m_ObjectName text="ReligionPressureIcon_H3_Shaivism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_H4_Shaktism"/>
+			<m_ObjectName text="ReligionPressureIcon_H4_Shaktism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_I1_Shia"/>
+			<m_ObjectName text="ReligionPressureIcon_I1_Shia"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_I2_Ibadi"/>
+			<m_ObjectName text="ReligionPressureIcon_I2_Ibadi"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_I3_Druze"/>
+			<m_ObjectName text="ReligionPressureIcon_I3_Druze"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_I4_Ahmadi"/>
+			<m_ObjectName text="ReligionPressureIcon_I4_Ahmadi"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Ifa"/>
+			<m_ObjectName text="ReligionPressureIcon_Ifa"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Itang"/>
+			<m_ObjectName text="ReligionPressureIcon_Itang"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Jainism"/>
+			<m_ObjectName text="ReligionPressureIcon_Jainism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Kachina"/>
+			<m_ObjectName text="ReligionPressureIcon_Kachina"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Laiboni"/>
+			<m_ObjectName text="ReligionPressureIcon_Laiboni"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Liim_Dingirmes"/>
+			<m_ObjectName text="ReligionPressureIcon_Liim_Dingirmes"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_M1_Ashurism"/>
+			<m_ObjectName text="ReligionPressureIcon_M1_Ashurism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_M2_Napir"/>
+			<m_ObjectName text="ReligionPressureIcon_M2_Napir"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Manichaeism"/>
+			<m_ObjectName text="ReligionPressureIcon_Manichaeism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Mhoma"/>
+			<m_ObjectName text="ReligionPressureIcon_Mhoma"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Mlagan"/>
+			<m_ObjectName text="ReligionPressureIcon_Mlagan"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Mndaenism"/>
+			<m_ObjectName text="ReligionPressureIcon_Mndaenism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Mshrikun"/>
+			<m_ObjectName text="ReligionPressureIcon_Mshrikun"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Muism"/>
+			<m_ObjectName text="ReligionPressureIcon_Muism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Mwari"/>
+			<m_ObjectName text="ReligionPressureIcon_Mwari"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Noaidevuohta"/>
+			<m_ObjectName text="ReligionPressureIcon_Noaidevuohta"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Num"/>
+			<m_ObjectName text="ReligionPressureIcon_Num"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Nzambiism"/>
+			<m_ObjectName text="ReligionPressureIcon_Nzambiism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_O1_Tangata_Manu"/>
+			<m_ObjectName text="ReligionPressureIcon_O1_Tangata_Manu"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_O2_Tala_Fonua"/>
+			<m_ObjectName text="ReligionPressureIcon_O2_Tala_Fonua"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Oenda"/>
+			<m_ObjectName text="ReligionPressureIcon_Oenda"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Onyamesom"/>
+			<m_ObjectName text="ReligionPressureIcon_Onyamesom"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_P1_Calvinism"/>
+			<m_ObjectName text="ReligionPressureIcon_P1_Calvinism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_P2_Baptist"/>
+			<m_ObjectName text="ReligionPressureIcon_P2_Baptist"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_P3_Methodism"/>
+			<m_ObjectName text="ReligionPressureIcon_P3_Methodism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_P4_Pentecostalism"/>
+			<m_ObjectName text="ReligionPressureIcon_P4_Pentecostalism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_P5_Adventism"/>
+			<m_ObjectName text="ReligionPressureIcon_P5_Adventism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Pchaism"/>
+			<m_ObjectName text="ReligionPressureIcon_Pchaism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Phi"/>
+			<m_ObjectName text="ReligionPressureIcon_Phi"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Pjelanca"/>
+			<m_ObjectName text="ReligionPressureIcon_Pjelanca"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Pohakantenna"/>
+			<m_ObjectName text="ReligionPressureIcon_Pohakantenna"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Puata_Tupuna"/>
+			<m_ObjectName text="ReligionPressureIcon_Puata_Tupuna"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Q1"/>
+			<m_ObjectName text="ReligionPressureIcon_Q1"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Q2"/>
+			<m_ObjectName text="ReligionPressureIcon_Q2"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Q3"/>
+			<m_ObjectName text="ReligionPressureIcon_Q3"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Q4"/>
+			<m_ObjectName text="ReligionPressureIcon_Q4"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_R1_Atanodjuwaja_Cult"/>
+			<m_ObjectName text="ReligionPressureIcon_R1_Atanodjuwaja_Cult"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_R2_Mysteries"/>
+			<m_ObjectName text="ReligionPressureIcon_R2_Mysteries"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_R3_Neoplatonism"/>
+			<m_ObjectName text="ReligionPressureIcon_R3_Neoplatonism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_R4_Numenism"/>
+			<m_ObjectName text="ReligionPressureIcon_R4_Numenism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_R5_Imperial_Cult"/>
+			<m_ObjectName text="ReligionPressureIcon_R5_Imperial_Cult"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_R6_Mithraism"/>
+			<m_ObjectName text="ReligionPressureIcon_R6_Mithraism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_R7_Heros_Cult"/>
+			<m_ObjectName text="ReligionPressureIcon_R7_Heros_Cult"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Razana"/>
+			<m_ObjectName text="ReligionPressureIcon_Razana"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Rodnovery"/>
+			<m_ObjectName text="ReligionPressureIcon_Rodnovery"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_S1_Romuva"/>
+			<m_ObjectName text="ReligionPressureIcon_S1_Romuva"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Sgaanaang"/>
+			<m_ObjectName text="ReligionPressureIcon_Sgaanaang"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Smanism"/>
+			<m_ObjectName text="ReligionPressureIcon_Smanism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Snteria"/>
+			<m_ObjectName text="ReligionPressureIcon_Snteria"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Southern_Cult"/>
+			<m_ObjectName text="ReligionPressureIcon_Southern_Cult"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Tjukurpa"/>
+			<m_ObjectName text="ReligionPressureIcon_Tjukurpa"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Tmaukelism"/>
+			<m_ObjectName text="ReligionPressureIcon_Tmaukelism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Tzolkin"/>
+			<m_ObjectName text="ReligionPressureIcon_Tzolkin"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_U1_Suomenusko"/>
+			<m_ObjectName text="ReligionPressureIcon_U1_Suomenusko"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Voodoo"/>
+			<m_ObjectName text="ReligionPressureIcon_Voodoo"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_X0"/>
+			<m_ObjectName text="ReligionPressureIcon_X0"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_X1"/>
+			<m_ObjectName text="ReligionPressureIcon_X1"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_X2"/>
+			<m_ObjectName text="ReligionPressureIcon_X2"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_X3"/>
+			<m_ObjectName text="ReligionPressureIcon_X3"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_X4"/>
+			<m_ObjectName text="ReligionPressureIcon_X4"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_X5"/>
+			<m_ObjectName text="ReligionPressureIcon_X5"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_X6"/>
+			<m_ObjectName text="ReligionPressureIcon_X6"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_X7"/>
+			<m_ObjectName text="ReligionPressureIcon_X7"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_X8"/>
+			<m_ObjectName text="ReligionPressureIcon_X8"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_X9"/>
+			<m_ObjectName text="ReligionPressureIcon_X9"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Yazdanism"/>
+			<m_ObjectName text="ReligionPressureIcon_Yazdanism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Zemiism"/>
+			<m_ObjectName text="ReligionPressureIcon_Zemiism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_C0_Catholicism"/>
+			<m_ObjectName text="ReligionPressureIcon_C0_Catholicism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Datura"/>
+			<m_ObjectName text="ReligionPressureIcon_Datura"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Mchos"/>
+			<m_ObjectName text="ReligionPressureIcon_Mchos"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Mohism"/>
+			<m_ObjectName text="ReligionPressureIcon_Mohism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Nmmo"/>
+			<m_ObjectName text="ReligionPressureIcon_Nmmo"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_P6_Anabaptism"/>
+			<m_ObjectName text="ReligionPressureIcon_P6_Anabaptism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_P7_Quaker"/>
+			<m_ObjectName text="ReligionPressureIcon_P7_Quaker"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Q5"/>
+			<m_ObjectName text="ReligionPressureIcon_Q5"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Q6"/>
+			<m_ObjectName text="ReligionPressureIcon_Q6"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_S0_Rodnovery"/>
+			<m_ObjectName text="ReligionPressureIcon_S0_Rodnovery"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_T1_Shenism"/>
+			<m_ObjectName text="ReligionPressureIcon_T1_Shenism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Z1_Zurvanism"/>
+			<m_ObjectName text="ReligionPressureIcon_Z1_Zurvanism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_C7_Hussitism"/>
+			<m_ObjectName text="ReligionPressureIcon_C7_Hussitism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_C8_Bogomilism"/>
+			<m_ObjectName text="ReligionPressureIcon_C8_Bogomilism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_I5_Twelver"/>
+			<m_ObjectName text="ReligionPressureIcon_I5_Twelver"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_I6_Fiver"/>
+			<m_ObjectName text="ReligionPressureIcon_I6_Fiver"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_I7_Ismaili"/>
+			<m_ObjectName text="ReligionPressureIcon_I7_Ismaili"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_K0"/>
+			<m_ObjectName text="ReligionPressureIcon_K0"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_K1_Palo"/>
+			<m_ObjectName text="ReligionPressureIcon_K1_Palo"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_P8_Witnesses"/>
+			<m_ObjectName text="ReligionPressureIcon_P8_Witnesses"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_P9_Unitarianism"/>
+			<m_ObjectName text="ReligionPressureIcon_P9_Unitarianism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Q0"/>
+			<m_ObjectName text="ReligionPressureIcon_Q0"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Q7_Legalism"/>
+			<m_ObjectName text="ReligionPressureIcon_Q7_Legalism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Q8_Spiritism"/>
+			<m_ObjectName text="ReligionPressureIcon_Q8_Spiritism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Q9_Dini_Ilahi"/>
+			<m_ObjectName text="ReligionPressureIcon_Q9_Dini_Ilahi"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_A0_Pchaism"/>
+			<m_ObjectName text="ReligionPressureIcon_A0_Pchaism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_A3_Chiminigagua"/>
+			<m_ObjectName text="ReligionPressureIcon_A3_Chiminigagua"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_A4_Andean"/>
+			<m_ObjectName text="ReligionPressureIcon_A4_Andean"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_G0_Manichaeism"/>
+			<m_ObjectName text="ReligionPressureIcon_G0_Manichaeism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_J0_Cnaanism"/>
+			<m_ObjectName text="ReligionPressureIcon_J0_Cnaanism"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Kepercayaan"/>
+			<m_ObjectName text="ReligionPressureIcon_Kepercayaan"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Odinani"/>
+			<m_ObjectName text="ReligionPressureIcon_Odinani"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Q3"/>
+			<m_ObjectName text="ReligionPressureIcon_Q3"/>
+		</Element>
+		<Element>
+			<m_EntryID text="ReligionPressureIcon_Tianism"/>
+			<m_ObjectName text="ReligionPressureIcon_Tianism"/>
+		</Element>
+	</m_Entries>
+	<m_AllowedPlatforms>
+		<Element>WINDOWS</Element>
+		<Element>LINUX</Element>
+		<Element>MACOS</Element>
+		<Element>IOS</Element>
+	</m_AllowedPlatforms>
+</AssetObjects..XLP>
+

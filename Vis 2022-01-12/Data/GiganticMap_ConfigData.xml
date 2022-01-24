@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+  <MapSizes>
+    <Row MapSizeType="MAPSIZE_GIGANTIC" Name="Giant As Fuck" Description="Giant as fucking fuck, nor for Marks' laptops"
+         MinPlayers="2" MaxPlayers="24" DefaultPlayers="8" MinCityStates="10" MaxCityStates="30" DefaultCityStates="20"
+         SortIndex="70"/>
+  </MapSizes>
+</GameInfo>

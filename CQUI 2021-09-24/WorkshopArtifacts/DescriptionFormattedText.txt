@@ -1,0 +1,120 @@
+[img]https://i.imgur.com/Df4rNBo.png[/img]
+
+[h2]Works with Fall 2019, Spring and Summer 2020 Patches from Firaxis, as well as currently released New Frontier Pass updates.[/h2]
+[h3] Mod is actively maintained and tracked on the [url=https://github.com/civfanatics/CQUI_Community-Edition]CivFanatics GitHub Page[/url]
+[/h3]
+
+CQUI is an open source Civilization 6 mod that is maintained by its community that helps you manage your empire faster and easier. It's an enhancement of the original UI that gives you the information you need with less clicks. It also have a lot of useful functionality that makes the game even better.
+
+[img]https://i.imgur.com/ywhZtaH.png[/img]
+
+[b]Epic Games Users[/b] 
+Try here to get updated copy of the Mod: https://steamworkshopdownloader.io/download/2115302648
+(as for some reason, the SteamWorkshop.download site does not always have an updated copy)
+
+[h1]Key Features[/h1]
+[quote]
+[b]New March 2021 Feature:[/b]
+[list]
+[*] Barbarians in the Barbarian Clans mode now have a small indicator of their clan attached to each unit flag
+[*] Barbarian camps show relevant information in their banners:
+    - Icons display in the banner if there is an active bribe (with turns left), if the clan has been incited, or if there is a unit to ransom.
+    - A small star appears next to the clan logo if there is a unit available for hire.
+[/list]
+
+[b]New January 2021 Features:[/b]
+[list]
+[*]Should now work with Linux
+[*]Individual Hero information on Heroes Panel is wider, reducing text squashing
+[*]City-State Quests now show as inline text (adjustable size font) in the City States list
+[/list]
+
+[b]Features:[/b]
+[list]
+[*]Civ V Style Cityview
+    - Produce or buy units with gold and faith from a single production panel
+    - Production panel elements compressed and reordered
+    - Improved amenities city details screen (clean icons)
+    - Growth/Production progress is enumerated in the city panel
+[*]"Smart" City Banners
+    - Icons showing districts built and if more are available to be built
+    - Housing, turns until population growth, turns until culture growth displayed in banners
+    - City State banners show Suzerain icon (Configurable: Civ Symbol or Leaderhead)
+    - City State banners display an icon when at war with you
+    - Tooltip with information about the original owner of that City (and if the original capitol)
+[*]Additional Tooltips to quickly find information:
+    - Tooltip on City Banner showing districts built, districts available, housing, turns until growth
+    - Tooltip on Unit upgrade includes maintenance costs (current and upgraded unit)
+    - Tooltip in City State list shows all envoys sent from all Civs
+    - Tooltip on Plot shows additional information, such as Tourism generated
+[*]Improvements for Units
+    - Builders, Engineers, and Religious units show the remaining number of charges on the Unit flag
+    - Non-religious unit flags are dimmed when Religion lens applied (with option to hide completely)
+    - Unit actions are no longer hidden behind an expand button
+    - Unit XP bars are twice as tall
+    - Unit flags show a "+" icon when able to be promoted
+    - Hero units have a brighter glow
+[*]Great Person and Heroes panels revamped
+    - Reduced or eliminate side scrolling
+    - Adapts to the screen height
+    - Heroes entries are twice as wide for better readability
+[*]Policy Reminder Popup
+    - If new policies are available, a popup reminds you to check them out
+[*]Notifications appear for Goody Hut Rewards, zooming to location when clicked
+[*]"My Government" tab removed from Government panel
+[*]Leaderheads expanded tooltips
+[*]Map Pinning system enhanced
+    - New pins
+    - Long pinlists are now scrollable
+    - Shift-Right click on pinlist to quickly delete pins
+    - Enter key now bound to finalizing a pin in pin creation menu
+[*]Tech/Civic Tree and Civilopedia now Auto-focuses the Search bar
+[*]Civilopedia remembers the last visited page
+[*]Civic/Tech popups can be disabled
+    - Civic/Tech voice-overs can be set to only play manually
+[*]Recommendation UI can be enabled/disabled
+[*]Citizen management icons are resizable to make seeing yield info easier
+[*]Improved resource icons are dimmed to emphasize unutilized resources
+[*]Available customized key bindings
+[*]Luxury resources are displayed in the top bar alongside strategic resources
+[*]Right clicking the action panel (bottom right button) instantly ends turn
+    - Even when things like production/research/unit moves have not been decided
+[*]Dedicated mod settings menu (Tobacco icon above mini-map)
+[/list]
+[/quote]
+
+[img]https://i.imgur.com/ywhZtaH.png[/img]
+
+[h1]Integrations:[/h1]
+[quote]
+[list]
+  [*]Improved Deal Screen - by mironos
+  [*]Better Trade Screen - by astog
+  [*]More Lenses - by astog
+  [*]Better Espionage Screen - by astog
+  [*]Production Queue - by kblease
+  [*]Divine Yuri's Custom City Panel - by Divine Yuri
+  [*]Simplified Gossip - by FinalFreak16
+[/list]
+[/quote]
+
+[img]https://i.imgur.com/ywhZtaH.png[/img]
+
+[h1]Contributors are Always Welcome[/h1]
+You want to contribute to the mod? We're always welcoming new contributors and the pull requests are open if you wish to tackle an issue.
+Note that with this updated Workshop entry, we have moved the location of the CQUI Mod source code.  A number of issues found in the [url=https://github.com/Azurency/CQUI_Community-Edition]previous Github location[/url] may not yet be listed in the current Github fork where work is being done.
+
+            [url=https://github.com/civfanatics/CQUI_Community-Edition][img]https://i.imgur.com/JpTn6gu.png[/img][/url]
+            [url=https://github.com/civfanatics/CQUI_Community-Edition/issues][img]https://i.imgur.com/cVXMIyS.png[/img][/url]
+
+[h3]Huge Thank You to Everyone That Has Contributed[/h3]
+This updated version of CQUI in the Steam Workshop is brought to you by a few folks on GitHub (especially [b]alexeyOnGitHub[/b], [b]Infixo[/b], [b]alimulhuda[/b], and [b]the_m4a[/b]) that picked up on the work done previously by [b]Azurency[/b], [b]Sparrow[/b], [b]Aristos[/b] and others.
+
+Huge thanks to the excellent CQUI contributors and translators. With their hard work, unique skills, and vigilance in bug testing make this MOD possible. :-)
+
+
+[img]https://i.imgur.com/ywhZtaH.png[/img]
+
+MIT License set out by chaorace from the original release of CQUI: [img]https://i.imgur.com/QqIzWJM.png[/img]
+
+

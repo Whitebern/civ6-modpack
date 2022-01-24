@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <LocalizedText>
+    <!-- ENGLISH -->
+    <Row Tag="LOC_CQUI_NAME" Language="en_US">
+      <Text>CQUI</Text>
+    </Row>
+
+    <!-- MESSAGES -->
+    <Row Tag="LOC_CQUI_CIVIC_MESSAGE_S" Language="en_US">
+      <Text>The current Civic, </Text>
+    </Row>
+    <Row Tag="LOC_CQUI_TECH_MESSAGE_S" Language="en_US">
+      <Text>The current Technology, </Text>
+    </Row>
+    <Row Tag="LOC_CQUI_HALF_MESSAGE_E" Language="en_US">
+      <Text>, is one turn away from maximum Inspiration bonus.</Text>
+    </Row>
+    <Row Tag="LOC_CQUI_FINISH_MESSAGE_E" Language="en_US">
+      <Text>, is completed.</Text>
+    </Row>
+
+    <!-- CITY PANEL -->
+    <Row Tag="LOC_CQUI_CITY_ENTERTAINMENT" Language="en_US">
+      <Text>Entertainment</Text>
+    </Row>
+    <Row Tag="LOC_HUD_CITY_FROM_POPULATION" Language="en_US">
+      <Text>from Population</Text>
+    </Row>
+    <Row Tag="LOC_HUD_CITY_RELIGIOUS_MINORITIES" Language="en_US">
+      <Text>Religious Minorities</Text>
+    </Row>
+    <Row Tag="LOC_HUD_CITY_PILLAGED" Language="en_US">
+      <Text>[COLOR:StatBadCS](Pillaged)[ENDCOLOR]</Text>
+    </Row>
+
+    <!-- CITY VIEW -->
+    <Row Tag="LOC_HUD_CITY_NEXT_PLOT" Language="en_US">
+      <Text>The city will expand to this tile upon the next cultural borders growth</Text>
+    </Row>
+
+    <!-- POPUPS -->
+    <Row Tag="LOC_CQUI_GREAT_PERSON_PROGRESS" Language="en_US">
+      <Text>Progress:</Text>
+    </Row>
+
+    <!-- ActionPanel -->
+    <Row Tag="LOC_CQUI_ACTION_PANEL_ENCAMPMENT_RANGED_ATTACK" Language="en_US">
+      <Text>Encampent Ranged Strike</Text>
+    </Row>
+    <Row Tag="LOC_CQUI_ACTION_PANEL_ENCAMPMENT_RANGED_ATTACK_TOOLTIP" Language="en_US">
+      <Text>Your encampment is able to make a ranged strike</Text>
+    </Row>
+
+    <!-- Policyreminderpopup -->
+    <Row Tag="LOC_POLICY_REMINDER_TITLE" Language="en_US">
+		  <Text>POLICY REMINDER</Text>
+    </Row>
+    <Row Tag="LOC_POLICY_REMINDER_TEXT" Language="en_US">
+      <Text>New policy cards have been unlocked.</Text>
+    </Row>
+    <Row Tag="LOC_POLICY_REMINDER_ACTION_BUTTON" Language="en_US">
+      <Text>POLICY CHANGE</Text>
+    </Row>
+    <Row Tag="LOC_POLICY_REMINDER_ACTION_BUTTON_TOOLTIP" Language="en_US">
+      <Text>You can change your policy this turn.</Text>
+    </Row>
+
+    <!-- Diplomacy View -->
+    <Row Tag="LOC_CQUI_DIPLOMACY_VIEW_TOTAL_SCORE_PER_TURN_TEXT" Language="en_US">
+      <Text>Total</Text>
+    </Row>
+
+    <!-- Smartbanner unlocked citizen -->
+    <Row Tag="LOC_CQUI_SMARTBANNER_UNLOCKEDCITIZEN_TOOLTIP" Language="en_US">
+      <Text>There are unlocked citizens being automatically assigned by the AI city governor.</Text>
+    </Row>
+    
+    <!-- #62 Infixo original owner tooltip -->
+    <Row Tag="LOC_CQUI_CITY_BANNER_ORIGINAL_CAPITAL_TT" Language="en_US">
+        <Text>[NEWLINE][ICON_Bullet]Original capital of {1_OriginalOwner}</Text>
+    </Row>
+    <Row Tag="LOC_CQUI_CITY_BANNER_ORIGINAL_CITY_TT" Language="en_US">
+        <Text>[NEWLINE][ICON_Bullet]Original city of {1_OriginalOwner}</Text>
+    </Row>
+    
+    <!-- #75 Infixo tourism info in the plot tooltip -->
+    <Row Tag="LOC_CQUI_TOOLTIP_PLOT_IMPROVE_RESOURCE" Language="en_US">
+        <Text>[COLOR:Civ6Red]Improve or repair the tile to extract the resource[ENDCOLOR]</Text>
+    </Row>
+    
+    <!-- #177 Infixo goody hut rewards -->
+    <Row Tag="LOC_GOODYHUT_CIVIC_BOOST_DESCRIPTION" Language="en_US">
+        <Text>The [ICON_CivicBoosted] Inspiration moment for {1_Num} {1_Num: plural 1?random civic; other?random civics;}</Text>
+    </Row>
+    <Row Tag="LOC_GOODYHUT_TECH_BOOST_DESCRIPTION" Language="en_US">
+        <Text>The [ICON_TechBoosted] Eureka moment for {1_Num} {1_Num: plural 1?random technology; other?random technologies;}</Text>
+    </Row>
+    <Row Tag="LOC_GOODYHUT_STRATEGIC_RESOURCES_DESCRIPTION" Language="en_US">
+        <Text>+{1_Num} most advanced strategic resources</Text>
+    </Row>
+
+  </LocalizedText>
+</GameData>

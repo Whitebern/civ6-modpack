@@ -1,0 +1,41 @@
+-- Full credit to Zee for this (Zee's Properly Timed Eras)
+
+DELETE FROM GameSpeed_Turns WHERE GameSpeedType <> 'GAMESPEED_ONLINE';
+
+INSERT INTO GameSpeed_Turns 
+		(GameSpeedType, 		MonthIncrement, TurnsPerIncrement)
+VALUES 	('GAMESPEED_QUICK', 	900, 			40),			
+		('GAMESPEED_QUICK', 	456, 			40),			
+		('GAMESPEED_QUICK', 	264, 			40),			
+		('GAMESPEED_QUICK', 	180, 			15),			
+		('GAMESPEED_QUICK', 	60, 			25),			
+		('GAMESPEED_QUICK', 	36, 			30),			
+		('GAMESPEED_QUICK', 	24, 			45),			
+		('GAMESPEED_QUICK', 	12, 			95),																															
+ 		('GAMESPEED_STANDARD', 	600, 			60),			
+		('GAMESPEED_STANDARD', 	300, 			60),			
+		('GAMESPEED_STANDARD', 	180, 			60),			
+		('GAMESPEED_STANDARD', 	72, 			62),			
+		('GAMESPEED_STANDARD', 	24, 			58),			
+		('GAMESPEED_STANDARD', 	12, 			132),			
+		('GAMESPEED_STANDARD', 	6, 				68),		
+ 		('GAMESPEED_EPIC', 		420, 			60),			
+		('GAMESPEED_EPIC', 		360, 			30),			
+		('GAMESPEED_EPIC', 		240, 			30),			
+		('GAMESPEED_EPIC', 		180, 			60),			
+		('GAMESPEED_EPIC', 		120, 			90),			
+		('GAMESPEED_EPIC', 		96, 			20),			
+		('GAMESPEED_EPIC', 		48, 			20),			
+		('GAMESPEED_EPIC', 		36, 			20),			
+		('GAMESPEED_EPIC', 		24, 			65),			
+		('GAMESPEED_EPIC', 		12, 			85),			
+		('GAMESPEED_EPIC', 		6, 				270),			
+ 		('GAMESPEED_MARATHON', 	240, 			60),			
+		('GAMESPEED_MARATHON', 	180, 			120),			
+		('GAMESPEED_MARATHON', 	144, 			15),			
+		('GAMESPEED_MARATHON', 	96, 			165),			
+		('GAMESPEED_MARATHON', 	60, 			180),			
+		('GAMESPEED_MARATHON', 	24, 			180),			
+		('GAMESPEED_MARATHON', 	12, 			100),			
+		('GAMESPEED_MARATHON', 	6, 				80),			
+		('GAMESPEED_MARATHON', 	3, 				600);			
