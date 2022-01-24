@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+
+	<Technologies>
+		<!-- Adds description to Engineering, where we added flood plain removal -->
+		<Update>
+			<Where TechnologyType="TECH_ENGINEERING" />
+			<Set Description="LOC_TECH_ENGINEERING_DESCRIPTION"/>
+		</Update>
+		<!-- Adds description to Military Engineering, where we added niter harvesting -->
+		<Update>
+			<Where TechnologyType="TECH_MILITARY_ENGINEERING" />
+			<Set Description="LOC_TECH_MILITARY_ENGINEERING_DESCRIPTION"/>
+		</Update>
+		<!-- Adds description to Radio, where we added uranium harvesting -->
+		<Update>
+			<Where TechnologyType="TECH_RADIO" />
+			<Set Description="LOC_TECH_RADIO_DESCRIPTION"/>
+		</Update>
+		<!-- Adds description to Combined Arms, where we added uranium harvesting -->
+		<Update>
+			<Where TechnologyType="TECH_COMBINED_ARMS" />
+			<Set Description="LOC_TECH_COMBINED_ARMS_DESCRIPTION"/>
+		</Update>
+	</Technologies>
+	
+	
+
+	<Features>
+		<Update>
+			<Where FeatureType="FEATURE_FLOODPLAINS" />
+			<Set RemoveTech="TECH_ENGINEERING" Removable="true" />
+		</Update>
+	</Features>
+</GameInfo>

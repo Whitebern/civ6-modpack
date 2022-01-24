@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="12f363bf-b656-472b-9896-82753a83d703" version="1">
+  <Properties>
+    <Name>[COLOR_FLOAT_SCIENCE]Removable Resources and Features[ENDCOLOR]</Name>
+    <Description>This mod allows all resources to be harvested, with yield types set as I deemed appropriate. It also grants the ability to remove flood plains upon researching Engineering. Flood plain removal gives no yield.[NEWLINE][NEWLINE]- Archeology resources yield a base 100 culture[NEWLINE][NEWLINE]- Luxury resources yield approximately 4 times the standard yield of bonus resources, distributed into different combinations of food, production, culture, and gold.[NEWLINE][NEWLINE]- Strategic resources yield increasing amounts of production based on when they are normally revealed.[NEWLINE][NEWLINE]- Harvesting is made available through the same technology in which the improvement for that resource is unlocked. This is also shown in the technology descriptions.[NEWLINE]</Description>
+    <Teaser>This mod allows you to harvest all types of resources, and remove flood plains and reefs.</Teaser>
+    <Authors>TC</Authors>
+    <SpecialThanks>LeeS, DoubleDown11</SpecialThanks>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  <InGameActions>
+    <UpdateDatabase id="NewAction">
+      <Properties>
+        <LoadOrder>9000</LoadOrder>
+      </Properties>
+      <File>TCHarvestableResources.sql</File>
+    </UpdateDatabase>
+  </InGameActions>
+  <Files>
+    <File>TCHarvestableResources.sql</File>
+  </Files>
+</Mod>
